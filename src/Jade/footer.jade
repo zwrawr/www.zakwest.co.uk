@@ -1,0 +1,13 @@
+mixin nav-item(name, link)
+    .navitem
+        a(href="#{link}") 
+            p #{name}
+
+.footer
+    .nav
+        +nav-item("First","#first")
+        +nav-item("Second","#second")
+        +nav-item("Third","#third")
+        
+    .copyright
+        p (c) Zak West 2016

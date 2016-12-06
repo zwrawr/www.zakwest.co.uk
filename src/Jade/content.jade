@@ -1,0 +1,9 @@
+mixin item(title,desc)
+    .item
+        h2 #{title}
+        p #{desc}
+
+.content
+    +item("First", "This is the first item")
+    +item("Second", "This is the second item")
+    +item("Third", "This is the third item")
