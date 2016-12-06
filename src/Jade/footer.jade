@@ -1,13 +1,17 @@
 mixin nav-item(name, link)
     .navitem
-        a(href="#{link}") 
+        a(href="#{link}",target="_blank")
             p #{name}
 
 .footer
     .nav
-        +nav-item("First","#first")
-        +nav-item("Second","#second")
-        +nav-item("Third","#third")
-        
+        +nav-item("Blog","https://blog.zakwest.tech")
+        +nav-item("Twitter","https://www.twitter.com/zwrawr")
+        +nav-item("GitHub","https://www.github.com/zwrawr")
+        +nav-item("YouTube","https://www.youtube.com/channel/UC3OG7zVBvAsvJojeH2tVGbg")
+        +nav-item("LudumDare","http://ludumdare.com/compo/author/zwrawr/")
+        +nav-item("LinkedIn","https://uk.linkedin.com/in/zakrawest")
+        +nav-item("Files","https://www.zakwest.tech/files")
+
     .copyright
         p (c) Zak West 2016
