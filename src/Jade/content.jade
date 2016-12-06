@@ -1,9 +1,16 @@
-mixin item(title,desc)
+mixin item(title,desc,link)
     .item
-        h2 #{title}
-        p #{desc}
+        a(href="#{link}", target="_blank")
+            h2 #{title}
+            p #{desc}
+            img(src="/img/content/#{title}.svg")
 
 .content
-    +item("First", "This is the first item")
-    +item("Second", "This is the second item")
-    +item("Third", "This is the third item")
+    .items
+        +item("Blog","Read my blog.","https://blog.zakwest.tech")
+        +item("Twitter","Follow my twitter","https://www.twitter.com/zwrawr")
+        +item("GitHub","See my work","https://www.github.com/zwrawr")
+        +item("YouTube","Watch my videos","https://www.youtube.com/channel/UC3OG7zVBvAsvJojeH2tVGbg")
+        +item("LudumDare","Play my games","http://ludumdare.com/compo/author/zwrawr/")
+        +item("LinkedIn","Veiw my profile","https://uk.linkedin.com/in/zakrawest")
+        +item("Files","Download my stuff","https://www.zakwest.tech/files")

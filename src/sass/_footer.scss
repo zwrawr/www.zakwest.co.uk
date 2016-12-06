@@ -1,7 +1,7 @@
 .footer
 {
     width: 100%;
-    background-color: black;
+    background-color: $nephritis;
     background-repeat: repeat;
     background-size: cover;
 
@@ -18,7 +18,7 @@
 
         .navitem
         {
-            background-color: $nephritis;
+            background-color: $near-black;
 
             padding: 10px;
 
@@ -29,7 +29,9 @@
             {
                 text-align: center;
                 text-decoration: none;
-                color: $subtitle-color;
+                color: $off-white;
+                font-family: $font-stack;
+
                 margin: 0;
             }
         }
@@ -37,6 +39,10 @@
         .navitem:hover
         {
             background-color: $emerald;
+            p
+            {
+                color: $off-black;
+            }
         }
     }
 
@@ -47,16 +53,14 @@
 
         padding-bottom: 5px;
 
-        text-align: center;
-
-        font-style: italic;
-        font-size: 0.75em;
-        font-family: $font-stack;
-
-        color: $subtitle-color;
-
         p
         {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.75em;
+            font-family: $font-stack;
+            color: $off-black;
+            
             margin-top: 0;
             margin-bottom: 0;
         }

@@ -4,6 +4,7 @@
     background-image: url("/img/header/background.jpg");
     background-repeat: repeat;
     background-size: cover;
+    margin-bottom: 5px;
 
     .title
     {
@@ -20,7 +21,7 @@
         font-weight: normal;
 
         text-align: center;
-        color: $title-color;
+        color: $near-white;
     }
     .subtitle
     {
@@ -37,6 +38,6 @@
         font-style: italic;
 
         text-align: center;
-        color: $subtitle-color;
+        color: $off-white;
     }
 }

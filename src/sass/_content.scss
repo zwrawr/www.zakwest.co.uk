@@ -1,0 +1,65 @@
+.content
+{
+    .items
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .item
+        {
+            position: relative;
+            max-width: 350px;
+            width:100%;
+            height: auto;
+            margin: 5px;
+
+            a
+            {
+                h2
+                {
+                    width: 75%;
+
+                    text-align: center;
+                    font-family: $font-stack;
+                    font-size: 3em;
+                    color: $near-white;
+
+                    position: absolute;
+                    margin: 0 auto;
+
+                    left: 0;
+                    right: 0;
+                    top:5%;
+
+                    z-index: 2;
+
+                    background-color: rgba($near-black,0.75);
+
+                }
+
+                p
+                {
+                    width: 100%;
+                    margin: 0;
+
+                    text-align: center;
+                    font-family: $font-stack;
+                    color: $near-white;
+
+                    position: absolute;
+                    bottom: 5%;
+
+                    z-index: 2;
+                }
+
+                img
+                {
+                    width: 100%;
+                    height: auto;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
