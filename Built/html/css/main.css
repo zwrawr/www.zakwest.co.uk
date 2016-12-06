@@ -1,14 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .page {
-    margin: auto 0;
+    margin: auto;
     padding: 0;
     width: 100%;
     height: 100%;
-    max-width: 900px;
 }
 
 .header {
     width: 100%;
     background-image: url("/img/header/background.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
+}
+
+.header .title {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    font-size: 6em;
+    font-family: sans-serif;
+    font-weight: normal;
+    text-align: center;
+    color: #ecf0f1;
+}
+
+.header .subtitle {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 0em;
+    padding-bottom: 1em;
+    font-size: 0.75em;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    color: #bdc3c7;
 }
