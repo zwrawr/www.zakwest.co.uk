@@ -5,12 +5,14 @@ mixin item(title,desc,link)
             p #{desc}
             img(src="/img/content/#{title}.svg")
 
+mixin items(titles,descs,links)
+    - for (var i = 0; i < titles.length; i++) {
+        +item(titles[i],descs[i],links[i])
+    - }
+
 .content
+    - var titles = ["Blog","Twitter","GitHub","Youtube","LudumDare","LinkedIn","Files"]
+    - var descs = ["Read my Blog", "Fork my Repos", "Watch my Videos", "Play my Games", "Veiw my Profile", "Download my Projects"]
+    - var links = ["https://blog.zakwest.tech" , "https://www.twitter.com/zwrawr","https://www.github.com/zwrawr","https://www.youtube.com/channel/UC3OG7zVBvAsvJojeH2tVGbg","http://ludumdare.com/compo/author/zwrawr/","https://uk.linkedin.com/in/zakrawest","https://www.zakwest.tech/files"]
     .items
-        +item("Blog","Read my Blog","https://blog.zakwest.tech")
-        +item("Twitter","Follow my Twitter","https://www.twitter.com/zwrawr")
-        +item("GitHub","Fork my Repos","https://www.github.com/zwrawr")
-        +item("YouTube","Watch my Videos","https://www.youtube.com/channel/UC3OG7zVBvAsvJojeH2tVGbg")
-        +item("LudumDare","Play my Games","http://ludumdare.com/compo/author/zwrawr/")
-        +item("LinkedIn","Veiw my Profile","https://uk.linkedin.com/in/zakrawest")
-        +item("Files","Download my Projects","https://www.zakwest.tech/files")
+        +items(titles,descs,links)

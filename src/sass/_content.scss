@@ -1,5 +1,9 @@
 .content
 {
+    background-color: $near-black;
+    padding: 5px;
+    margin: 25px auto;
+
     .items
     {
         display: flex;
@@ -9,8 +13,8 @@
         .item
         {
             position: relative;
-            max-width: 350px;
-            width:100%;
+            max-width: 400px;
+            //width:100%;
             height: auto;
             margin: 5px;
 
