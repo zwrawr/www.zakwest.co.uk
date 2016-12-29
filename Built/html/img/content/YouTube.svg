@@ -1,42 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 0 628.125 628.125"
-   height="628.125"
-   width="628.125"
-   version="1.1"
-   id="svg4157">
-  <metadata
-     id="metadata4163">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs4161" />
-  <rect
-     y="-13.307734"
-     x="-11.97696"
-     height="658.73279"
-     width="654.74048"
-     id="rect4711"
-     style="fill:#e52d27;fill-opacity:1;stroke:none" />
-  <path
-     id="path4709"
-     d="m 312.41161,193.85404 c 173.70985,3.85083 169.91653,-11.31585 173.14379,120.91835 -6.24185,124.88619 8.54712,118.02677 -166.5568,120.44785 -176.45666,0.50201 -170.63509,4.53062 -175.49628,-117.15435 4.16336,-131.4359 -2.03066,-122.37355 168.90929,-124.21185 z"
-     style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
-  <path
-     id="path4167"
-     d="m 278.7709,264.42895 0.23525,97.86388 91.98264,-49.63769 z"
-     style="fill:#e52d27;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="1e3" width="1e3" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 1000 1000">
+<g>
+<rect height="1e3" width="1e3" y="-.0000384" x="0" fill="#e52d27"/>
+<path d="m499 300c282 0.0226 275 0.86 276 199 0.224 198 5.68 201-276 201-281 0.0816-274 2.17-274-196-0.126-198-7.37-204 274-204z" fill-rule="evenodd" fill="#fff"/>
+<path d="m440 425v150l150-76z" fill-rule="evenodd" fill="#e52d27"/>
+</g>
 </svg>
