@@ -2,27 +2,41 @@
 {
     background-color: $near-black;
     padding: 5px;
-    margin: 25px auto;
 
     .items
     {
-        display: flex;
+        display:inline-flex;
         justify-content: center;
         flex-wrap: wrap;
 
         .item
         {
             position: relative;
-            max-width: 400px;
-            //width:100%;
+            width: 24%;
             height: auto;
             margin: 5px;
+            overflow: hidden;
+
+            @media screen and (max-width: 1080px)
+            {
+               width: 32%;
+            }
+
+            @media screen and (max-width: 800px) {
+                width: 48%;
+            }
+
+            @media screen and (max-width: 500px) {
+                width: 99%;
+            }
 
             a
             {
                 h2
                 {
-                    width: 75%;
+                    width: 70%;
+
+
 
                     text-align: center;
                     font-family: $font-stack;
