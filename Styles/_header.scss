@@ -1,0 +1,47 @@
+
+.page-header{
+    background-image: url($background-image);
+    background-size: cover;
+
+    margin: 0px;
+
+    padding-top: 0.1vh;
+
+    .header-text
+    {
+        padding-top: 10%;
+        padding-bottom: 10%;
+
+        h1{
+            text-align: center;
+            color: $header-text-color;
+        }
+
+        h4{
+            font-family: 'Merriweather', sans;
+            font-weight: 400;
+            text-align: center;
+            color: $header-text-color;
+            letter-spacing: 105%;
+        }
+    }
+
+    .header-nav
+    {
+        margin: 0 auto;
+        .nav-links{
+            margin: 0 auto;
+            a
+            {
+                display: inline-block;
+
+                div {
+                    padding: 10px;
+                    h3{
+
+                    }
+                }
+            }
+        }
+    }
+}

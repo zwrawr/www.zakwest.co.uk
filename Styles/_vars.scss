@@ -1,0 +1,23 @@
+
+// images
+$background-image: "/img/header/background.jpg";
+
+// colors
+$background-color: #131515;
+$header-text-color: #ecf0f1;
+
+
+// import fonts
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
+
+// font stack
+$default-p-fontstack: 'Merriweather', sans;
+$default-h-fontstack: 'Open Sans', sans-serif;
+
+// default font sizes
+$default-h1-size: 40pt;
+$default-h2-size: 22pt;
+$default-h3-size: 18pt;
+$default-h4-size: 14pt;
+$default-h5-size: 12pt;
+$default-p-size : 10pt;
