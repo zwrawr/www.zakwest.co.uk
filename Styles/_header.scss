@@ -28,15 +28,42 @@
 
     .header-nav
     {
-        .nav-links{
-            list-style: none;
-            background: $background-color;
-            width: 100%;
-            a
-            {
-                h3{
+        margin: 0px;
+        ul.nav-links{
+            margin: 0px;
 
+            padding-left: 10%;
+            padding-right: 10%;
+
+            display:flex;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+
+            background: $background-color;
+            li {
+                display: inline;
+
+                width: auto;
+                height: auto;
+                margin-top: 1%;
+                margin-bottom: 1%;
+                margin-left: 0.5%;
+                margin-right: 0.5%;
+
+                padding: 1% 2%;
+                background-color: $button-color-normal;
+
+                text-align: center;
+                a{
+                    text-align: center;
+                    h3{
+
+                    }
                 }
+            }
+            li:hover{
+                background-color: $button-color-hover;
             }
         }
     }
