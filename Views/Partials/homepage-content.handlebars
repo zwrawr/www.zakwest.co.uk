@@ -1,0 +1,19 @@
+<div class="content homepage-content">
+    <div class="cells">
+        {{#cells}}
+
+            <div class="cell">
+                <a href="{{address}}" target="{{target}}">
+                    <h2 class="links_title {{type}}">
+                        {{title}}
+                    </h2>
+                    <p class="links_text {{type}}">
+                        {{description}}
+                    </p>
+                    <img class="links_image {{type}}" src="{{image}}" alt="{{image_desc}}">
+                </a>
+            </div>
+
+        {{/cells}}
+    </div>
+</div>

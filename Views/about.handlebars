@@ -1,3 +1,16 @@
-<div class="page-header">
-    <h2> About </h2>
-<div>
+{{#about}}
+
+    <div class="page-content">
+
+        {{#sections}}
+
+            <div class="section">
+                <h2>{{title}}</h2>
+                <p>{{content}}</p>
+            </div>
+
+        {{/sections}}
+
+    </div>
+    
+{{/about}}

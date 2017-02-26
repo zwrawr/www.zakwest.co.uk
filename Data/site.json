@@ -1,0 +1,23 @@
+{
+    "title" : "Zak West",
+	"desc" : "An Electronics And Computing Student at the University of York",
+    "links" :
+        [
+            {
+                "title" : "home",
+                "address" : "/",
+                "target" : "_self"
+            },
+            {
+                "title" : "About",
+                "address" : "/about",
+                "target" : "_self"
+            },
+            {
+                "title" : "Contact",
+                "address" : "/contact",
+                "target" : "_self"
+            }
+        ],
+    "copyright" : "Copyright Zak West 2017"
+}
