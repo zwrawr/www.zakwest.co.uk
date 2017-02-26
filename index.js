@@ -12,9 +12,9 @@ var app = express();
 app.disable('x-powered-by');
 
 // Set up handlebars
-var handlebars = require('express-handlebars').create({defaultLayout:'main'});
+var exphbs = require('express-handlebars');
 
-app.engine('handlebars', handlebars.engine);
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine','handlebars');
 
 // Set port
@@ -28,8 +28,11 @@ app.use(express.static(__dirname + '/Public'))
 */
 // log which routes are being visited
 app.use(function(req,res,next){
+    var d = new Date();
+    var datestring = d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes();
+
     var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    console.log(ip + " acessed " + req.url);
+    console.log(datestring + "\t>>>\t" + ip + " requested [" + req.url + "]");
     next();
 });
 
@@ -68,7 +71,18 @@ app.get('/blog', function(req,res){
 app.use(function(req,res){
     res.type('text/html');
     res.status(404);
-    res.render('404');
+
+    var pageJson =
+    {
+        "site" : autoJson.getJson("Data/site.json"),
+        "error" : {
+            "code": "404",
+            "name" : "Page not found",
+            "desc" : "We were not able to find the page you were looking for, sorry!"
+        }
+    };
+
+    res.render('error', pageJson);
 });
 
 // 500 page
@@ -77,7 +91,18 @@ app.use(function(err, req, res, next){
 
     res.type('text/html');
     res.status(500);
-    res.render('500');
+
+    var pageJson =
+    {
+        "site" : autoJson.getJson("Data/site.json"),
+        "error" : {
+            "code": "500",
+            "name" : "Server error",
+            "desc" : "We experienced an unexpected error and were unable to retrive the page you were looking for."
+        }
+    };
+
+    res.render('error', pageJson);
 });
 
 // Set up listing

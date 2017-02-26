@@ -28,18 +28,14 @@
 
     .header-nav
     {
-        margin: 0 auto;
         .nav-links{
-            margin: 0 auto;
+            list-style: none;
+            background: $background-color;
+            width: 100%;
             a
             {
-                display: inline-block;
+                h3{
 
-                div {
-                    padding: 10px;
-                    h3{
-
-                    }
                 }
             }
         }
