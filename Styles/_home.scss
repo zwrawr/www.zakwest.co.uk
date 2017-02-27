@@ -20,16 +20,18 @@ $cell-margin: 5px;
 
         .links_title{
             position: relative;
-            top: -0.95*$cell-size;
+            top: -0.975*$cell-size;
             right: 0px;
             bottom: auto;
             left: 0px;
 
             color: $offwhite;
-            font-size: $default-h2-size * 2;
+            font-size: $default-h2-size * 1.75;
 
-            width: 80%;
+            width: 75%;
             margin: auto;
+
+            background: rgba(#000,0.75);
         }
 
         .links_text{

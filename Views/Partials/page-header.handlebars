@@ -1,12 +1,14 @@
 {{#site}}
     <div class="page-header">
 
+        <div id="menu-button" onclick="toggleNavbar()"><div></div><div></div><div></div></div>
+
         <div class="header-text">
             <h1> {{title}} </h1>
             <h3> {{desc}} </h3>
         </div>
 
-        <div class="header-nav">
+        <div id="navbar-togglable" class="toggled-closed">
             {{> nav-links}}
         </div>
 
