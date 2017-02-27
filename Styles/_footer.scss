@@ -7,4 +7,10 @@
             @include navbar;
         }
     }
+
+    #copyright
+    {
+        text-align: center;
+        color: $offwhite;
+    }
 }

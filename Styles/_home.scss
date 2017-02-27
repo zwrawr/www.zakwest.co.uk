@@ -1,0 +1,56 @@
+$cell-size: 333px;
+$cell-margin: 5px;
+
+.cells{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+
+    .cell{
+        width: $cell-size;
+        height: $cell-size;
+
+        margin: $cell-margin;
+
+        text-align: center;
+
+        .links_title{
+            position: relative;
+            top: -0.95*$cell-size;
+            right: 0px;
+            bottom: auto;
+            left: 0px;
+
+            color: $offwhite;
+            font-size: $default-h2-size * 2;
+
+            width: 80%;
+            margin: auto;
+        }
+
+        .links_text{
+            position: relative;
+            top: auto;
+            right: 0px;
+            bottom: 0.35*$cell-size;
+            left: 0px;
+
+            color: $offwhite;
+            font-size: $default-h5-size;
+
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+}
+
+.links_image
+{
+    width: 100%;
+    height: 100%;
+}
