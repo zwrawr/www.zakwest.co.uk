@@ -1,0 +1,10 @@
+.page-footer{
+
+    .footer-nav
+    {
+        margin: 0px;
+        ul.nav-links{
+            @include navbar;
+        }
+    }
+}

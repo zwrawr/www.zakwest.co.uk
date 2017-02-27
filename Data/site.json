@@ -4,7 +4,7 @@
     "links" :
         [
             {
-                "title" : "home",
+                "title" : "Home",
                 "address" : "/",
                 "target" : "_self"
             },
