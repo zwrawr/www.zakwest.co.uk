@@ -27,9 +27,21 @@
         }
     }
 
-    .toggled-closed{
-        display:none;
+    #navbar-togglable{
+        overflow: hidden;
+
+        .nav-links{
+            transition: transform 0.5s ease;
+        }
     }
+    .toggled-closed .nav-links{
+        transform: translateY(100%);
+    }
+    .toggled-open  .nav-links{
+        transform: translateY(0);
+    }
+
+
 
     ul.nav-links{
         @include navbar;
