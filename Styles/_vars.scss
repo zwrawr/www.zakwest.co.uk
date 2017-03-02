@@ -9,6 +9,7 @@ $header-text-color: #ecf0f1;
 $button-color-hover: #2ecc71;
 $button-color-normal: #27ae60;
 
+$basicallywhite: #eeeeee;
 $nearwhite : #eee;
 $offwhite : #ddd;
 
@@ -20,13 +21,13 @@ $error-404-color : #d35400;
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
 
 // font stack
-$default-p-fontstack: 'Merriweather', sans;
-$default-h-fontstack: 'Open Sans', sans-serif;
+$serif-fontstack: 'Merriweather', serif;
+$default-fontstack: 'Open Sans', sans-serif;
 
 // default font sizes
-$default-h1-size: 22pt;
-$default-h2-size: 16pt;
-$default-h3-size: 14pt;
-$default-h4-size: 12pt;
-$default-h5-size: 11pt;
-$default-p-size : 10pt;
+$default-h1-size: 30pt;
+$default-h2-size: 22pt;
+$default-h3-size: 20pt;
+$default-h4-size: 16pt;
+$default-h5-size: 12pt;
+$default-p-size : 12pt;

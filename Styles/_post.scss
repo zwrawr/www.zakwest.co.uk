@@ -6,17 +6,47 @@
 
 .post{
 
-    padding: 20px 40px;
-    max-width: 800px;
-    background-color: $nearwhite;
+    font-size: 16px;
 
-    h1{}
-    h2{}
-    h3{}
-    h4{}
-    h5{}
+    padding: 10px 40px;
+    max-width: 980px;
+    background-color: $basicallywhite;
 
-    p{}
+    h1{
+        line-height: 2.0rem;
+
+        padding-top: 4%;
+        padding-bottom: 1%;
+
+        border-bottom: 2px solid #CCC;
+        margin: 2% 0px;
+    }
+    h2{
+        line-height: 2.0rem;
+
+        padding-top: 2%;
+        padding-bottom: 1%;
+
+        border-bottom: 1px solid #CCC;
+        margin: 1% 0px;
+    }
+    h3{
+        padding-top: 1%;
+        line-height: 1.6rem;
+    }
+    h4{
+        padding-top: 1%;
+        line-height: 1.6rem;
+    }
+    h5{
+        padding-top: 1%;
+        line-height: 1.4rem;
+    }
+
+    p{
+        padding-top: 1%;
+        line-height: 1.4rem;
+    }
 
     pre, code{
         background-color: $offwhite;
@@ -25,6 +55,6 @@
     blockquote{
         background-color: $offwhite;
         padding-left: 8px;
-        border-left: 8px solid #888;
+        border-left: 4px solid #BBB;
     }
 }

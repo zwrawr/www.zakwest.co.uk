@@ -70,3 +70,10 @@ Another paragraph with **emphisis**, *italics* , __under lines__ and ~~strike th
 ---
 ### With underscores
 ___
+
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
