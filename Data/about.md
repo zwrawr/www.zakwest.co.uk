@@ -11,10 +11,10 @@ Nullam egestas ullamcorper massa, sed euismod sapien semper laoreet. Etiam preti
 
 ## Images
 
-Inline-style:
+Inline-style:  
 ![alt text](https://www.zakwest.tech/images/links_images/blog_screenshot_square.png "Logo Title Text 1")
 
-Reference-style:
+Reference-style:  
 ![alt text][logo]
 
 [logo]: https://www.zakwest.tech/images/links_images/blog_screenshot_square.png "Logo Title Text 2"
@@ -31,7 +31,13 @@ Reference-style:
 Inline `code` has `back-ticks` around it.
 
 ## Quotes
+You can also do quotes in markdown
 > This is a quoted line of markdown.
+
+They can be multiple lines
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris metus libero, tincidunt id viverra at, elementum eu leo. Nam orci augue, congue id nunc sagittis, ultricies bibendum arcu.
+> Pellentesque et cursus erat, tincidunt rutrum dui. Vestibulum sit amet enim vestibulum, venenatis nulla eget, lacinia dolor. Vivamus non leo a nunc consectetur elementum. Vivamus in egestas justo.
+> Aliquam ac elementum dolor. Nullam egestas ullamcorper massa, sed euismod sapien semper laoreet. Etiam pretium pulvinar neque, eu semper tortor placerat vel
 
 ## Lists
 
@@ -39,9 +45,17 @@ Inline `code` has `back-ticks` around it.
 2. The second item
 3. The third item
 
+- The first item
+- The second item
+- The third item
+
+[ ] Github markdown also supports checklists
+[x] They can be checked
+[ ] or unchecked
+
 ## Text styling
 
-Another paragraph with **emphisis**, *italics* , __under lines__ and ~~strike threw~~
+Another paragraph with **emphisis**, *italics* , and ~~strike threw~~
 
 ## Links
 

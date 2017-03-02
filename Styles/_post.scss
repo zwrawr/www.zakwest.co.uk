@@ -6,8 +6,6 @@
 
 .post{
 
-    font-size: 16px;
-
     padding: 10px 40px;
     max-width: 980px;
     background-color: $basicallywhite;
@@ -48,13 +46,42 @@
         line-height: 1.4rem;
     }
 
-    pre, code{
+    hr{
+        margin: 1.5% 0px;
+        border: 3px solid #CCC;
+    }
+
+    pre{
+        padding: 2%;
         background-color: $offwhite;
     }
 
+    code{
+       font-family: $mono-fontstack;
+       background-color: $offwhite;
+       line-height: 1.5rem;
+    }
+
     blockquote{
+        p{
+            font-family: $serif-fontstack;
+        }
+
         background-color: $offwhite;
         padding-left: 8px;
         border-left: 4px solid #BBB;
+    }
+
+    ul{
+
+        li{
+
+        }
+
+    }
+
+    li{
+        font-family: $default-fontstack;
+        font-size: $default-p-size;
     }
 }
