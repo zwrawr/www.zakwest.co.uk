@@ -9,7 +9,12 @@ $header-text-color: #ecf0f1;
 $button-color-hover: #2ecc71;
 $button-color-normal: #27ae60;
 
-$offwhite : #bdc3c7;
+$nearwhite : #eee;
+$offwhite : #ddd;
+
+$error-500-color : #c0392b;
+$error-404-color : #d35400;
+
 
 // import fonts
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');

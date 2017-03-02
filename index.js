@@ -14,6 +14,9 @@ app.disable('x-powered-by');
 // Set up handlebars
 var exphbs = require('express-handlebars');
 
+// Set up for markdown
+var marked = require('marked');
+
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine','handlebars');
 
@@ -51,13 +54,17 @@ app.get('/',function(req,res){
 // About page
 app.get('/about',function(req,res){
 
+    var mddata = marked(fs.readFileSync("Data/about.md").toString('utf8'));
+
     var pageJson =
     {
         "site"  : autoJson.getJson("Data/site.json"),
-        "about" : autoJson.getJson('Data/about.json')
+        "post" : {
+            "markdown" : mddata
+        }
     };
 
-    res.render('about', pageJson);
+    res.render('post', pageJson);
 });
 
 

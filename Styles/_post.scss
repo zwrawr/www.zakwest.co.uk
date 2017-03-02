@@ -1,0 +1,30 @@
+.page-content{
+
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.post{
+
+    padding: 20px 40px;
+    max-width: 800px;
+    background-color: $nearwhite;
+
+    h1{}
+    h2{}
+    h3{}
+    h4{}
+    h5{}
+
+    p{}
+
+    pre, code{
+        background-color: $offwhite;
+    }
+
+    blockquote{
+        background-color: $offwhite;
+        padding-left: 8px;
+        border-left: 8px solid #888;
+    }
+}
