@@ -14,8 +14,15 @@ app.disable('x-powered-by');
 // Set up handlebars
 var exphbs = require('express-handlebars');
 
-// Set up for markdown
-var marked = require('marked');
+// Set up for markdown-it
+var md = require('markdown-it')({
+  html:         true,
+  breaks:       true,
+  langPrefix:   'lang-',
+  linkify:      true,
+  typographer:  true,
+  quotes: '“”‘’'
+}).use(require('markdown-it-container'), "right").use(require('markdown-it-container'), "left");
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine','handlebars');
@@ -72,7 +79,7 @@ app.get('/pages/:page',function(req,res,next){
         return;
     }
 
-    var mddata = marked(fs.readFileSync(pages.pages[i].filepath).toString('utf8'));
+    var mddata = md.render(fs.readFileSync(pages.pages[i].filepath).toString('utf8'));
 
     var pageJson =
     {

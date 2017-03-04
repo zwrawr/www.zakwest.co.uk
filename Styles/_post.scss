@@ -89,4 +89,52 @@
         font-family: $default-fontstack;
         font-size: $default-p-size;
     }
+
+    img{
+        display: inline-block;
+
+        width: 90%;
+        height: auto;
+        overflow: auto;
+        margin: 1% 5%;
+    }
+
+    .left{
+        float:left;
+        width: 33%;
+        height: auto;
+
+        clear: right;
+
+        margin-right:1%;
+        margin-bottom: 1%;
+        margin-top: 1%;
+
+        p{
+
+        }
+    }
+
+    .right{
+        float:right;
+        width: 33%;
+        height: auto;
+
+        clear: left;
+
+        margin-left:1%;
+        margin-bottom: 1%;
+        margin-top: 1%;
+
+        p{
+
+        }
+    }
+
+    // clear fix
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
