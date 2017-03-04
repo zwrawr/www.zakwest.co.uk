@@ -52,9 +52,27 @@ app.get('/',function(req,res){
 });
 
 // About page
-app.get('/about',function(req,res){
+app.get('/pages/:page',function(req,res,next){
 
-    var mddata = marked(fs.readFileSync("Data/about.md").toString('utf8'));
+    var pages = autoJson.getJson("Data/pages.json");
+    var exists = false;
+    var index = -1;
+    for (var i in pages.pages){
+        if (pages.pages[i].name == req.params.page){
+            exists = true;
+            index = i;
+            break;
+        }
+    }
+
+    if(!exists)
+    {
+        // That page does exists
+        next();
+        return;
+    }
+
+    var mddata = marked(fs.readFileSync(pages.pages[i].filepath).toString('utf8'));
 
     var pageJson =
     {

@@ -10,12 +10,12 @@
             },
             {
                 "title" : "About",
-                "address" : "/about",
+                "address" : "/pages/about",
                 "target" : "_self"
             },
             {
                 "title" : "Contact",
-                "address" : "/contact",
+                "address" : "/pages/contact",
                 "target" : "_self"
             }
         ],
