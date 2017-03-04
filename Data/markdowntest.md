@@ -62,9 +62,9 @@ Bullet points
 - The third item
 
 Checkboxes
-- [ ] Github markdown also supports checklists
-- [x] They can be checked
-- [ ] or unchecked
+-[ ] Github markdown also supports checklists
+-[x] They can be checked
+-[ ] or unchecked
 
 ## Text styling
 
