@@ -65,6 +65,82 @@
        font-family: $mono-fontstack;
        background-color: $offwhite;
        line-height: 1.5rem;
+
+        .hljs-comment,
+        .hljs-quote{
+            color: #999;
+        }
+
+        .hljs-type,
+        .hljs-class .hljs-title {
+          color: #449;
+        }
+
+        .hljs-tag,
+        .hljs-name,
+        .hljs-attribute {
+          color: #008;
+        }
+
+        .hljs-title,
+        .hljs-section,
+        .hljs-selector-id {
+          color: #A00;
+        }
+
+        .hljs-regexp,
+        .hljs-link {
+          color: #009926;
+        }
+
+        .hljs-symbol,
+        .hljs-bullet {
+          color: #A07;
+        }
+
+        .hljs-built_in,
+        .hljs-builtin-name {
+          color: #09b;
+        }
+
+        .hljs-meta {
+          color: #999;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag,
+        .hljs-subst {
+            color: #444;
+        }
+
+        .hljs-string,
+        .hljs-doctag {
+            color: #1A4;
+        }
+
+        .hljs-number,
+        .hljs-literal,
+        .hljs-variable,
+        .hljs-template-variable,
+        .hljs-tag .hljs-attr {
+            color: #088;
+        }
+
+        .hljs-deletion {
+          background: #fcc;
+        }
+
+        .hljs-addition {
+          background: #cfc;
+        }
+
+        .hljs-emphasis {
+          font-style: italic;
+        }
+
+        .hljs-strong {
+          font-weight: bold;
+        }
     }
 
     blockquote{

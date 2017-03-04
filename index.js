@@ -22,7 +22,12 @@ var md = require('markdown-it')({
   linkify:      true,
   typographer:  true,
   quotes: '“”‘’'
-}).use(require('markdown-it-container'), "right").use(require('markdown-it-container'), "left");
+}).use(
+    require('markdown-it-container'), "right"
+).use(
+    require('markdown-it-container'), "left"
+).use(
+    require('markdown-it-highlightjs'));
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine','handlebars');
