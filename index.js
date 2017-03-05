@@ -63,6 +63,18 @@ app.get('/',function(req,res){
     res.render('home', pageJson);
 });
 
+// Files page
+app.get('/Files',function(req,res){
+
+    var pageJson =
+    {
+        "site" : autoJson.getJson("Data/site.json"),
+        "files" : autoJson.getJson('Data/files.json')
+    };
+
+    res.render('files', pageJson);
+});
+
 // About page
 app.get('/pages/:page',function(req,res,next){
 

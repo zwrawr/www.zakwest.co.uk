@@ -1,0 +1,17 @@
+
+{{#children}} {{! Each item is an "li" }}
+<li>
+    <h3>{{name}}</h3>
+    <p>{{is_folder}}</h3>
+    <p>{{tag}}</h3>
+    <p>{{is_file}}</h3>
+    <p>{{path}}</h3>
+    <p>{{name}}</h3>
+
+    {{#if children}} {{! Within the context of the current item }}
+        <ul>
+            {{> filelist}} {{! Recursively render the partial }}
+        </ul>
+    {{/if}}
+</li>
+{{/children}}
