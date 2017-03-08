@@ -1,17 +1,26 @@
 
 {{#children}} {{! Each item is an "li" }}
-<li>
-    <h3>{{name}}</h3>
-    <p>{{is_folder}}</h3>
-    <p>{{tag}}</h3>
-    <p>{{is_file}}</h3>
-    <p>{{path}}</h3>
-    <p>{{name}}</h3>
+<li class="{{#if is_folder}}folder{{/if}}{{#if is_file}}file{{/if}}">
 
-    {{#if children}} {{! Within the context of the current item }}
-        <ul>
-            {{> filelist}} {{! Recursively render the partial }}
-        </ul>
+    {{#if is_folder}}
+        <label for="{{path}}">
+            <h3>{{name}}</h3>
+            <p>{{#if is_folder}}folder{{/if}}{{#if is_file}}file{{/if}} : {{path}}</p>
+        </label>
+
+        <input type="checkbox" id="{{path}}"/>
+
+        {{#if children}} {{! Within the context of the current item }}
+            <ul>
+                {{> filelist}} {{! Recursively render the partial }}
+            </ul>
+        {{/if}}
     {{/if}}
+
+
+    {{#if is_file}}
+        <a href="/files/{{path}}"><h3>{{name}}</h3></a>
+    {{/if}}
+
 </li>
 {{/children}}

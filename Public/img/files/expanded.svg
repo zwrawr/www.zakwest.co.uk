@@ -1,0 +1,7 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="5e2" width="5e2" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 500.00001 500.00001">
+<title>Expanded Icon</title>
+<g stroke-linejoin="round" fill-rule="evenodd" transform="translate(0 -5.5e2)">
+<path d="m1e2 6.5e2h3e2v3e2h-3e2z" stroke="#000" stroke-linecap="round" stroke-width="4" fill="#fff"/>
+<path d="m2.4e2 7e2h21v90h89v21h-89v89h-21v-89h-90v-21h90v-90z" stroke="#00f" stroke-width="5" fill="#00f"/>
+</g>
+</svg>
