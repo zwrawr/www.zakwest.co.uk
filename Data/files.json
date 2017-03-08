@@ -1,11 +1,11 @@
 
-  {
-     "is_folder":true,
-     "tag":"org",
-     "is_file":false,
-     "path":"",
-     "name":"files",
-     "children":[
+{
+    "is_folder":true,
+    "tag":"org",
+    "is_file":false,
+    "path":"",
+    "name":"files",
+    "children":[
         {
            "is_folder":true,
            "tag":"org",
@@ -82,5 +82,5 @@
            "path":"gen_folderdata.py",
            "name":"gen_folderdata.py"
         }
-     ]
-  }
+    ]
+}

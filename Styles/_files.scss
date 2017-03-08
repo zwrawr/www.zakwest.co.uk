@@ -20,12 +20,11 @@
 ul.tree
 {
 	padding: 0 0 0 30px;
-	width: 300px;
 }
 
 li{
     position: relative;
-    margin-left: -15px;
+    margin-left: -30px;
     list-style: none;
 }
 
@@ -78,7 +77,7 @@ li input
 
 li input + ul
 {
-    background: url(/img/files/expanded.svg) 40px 0 no-repeat;
+    background: url(/img/files/expanded.svg) 40px -5px no-repeat;
     background-size: 20px;
 
     margin: -0.938em 0 0 -44px; /* 15px */
@@ -103,7 +102,7 @@ li label
 
 li input:checked + ul
 {
-	background: url(/img/files/collapsed.svg)40px 5px no-repeat;
+	background: url(/img/files/collapsed.svg)40px 0px no-repeat;
     background-size: 20px;
 
 	margin: -1.25em 0 0 -44px; /* 20px */
@@ -128,6 +127,7 @@ h3{
     display: inline-block;
     color: $background-color;
     padding-left: 10px;
+    padding-right: 1em;
 }
 
 p{

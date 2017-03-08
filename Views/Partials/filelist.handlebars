@@ -5,7 +5,7 @@
     {{#if is_folder}}
         <label for="{{path}}">
             <h3>{{name}}</h3>
-            <p>{{#if is_folder}}folder{{/if}}{{#if is_file}}file{{/if}} : {{path}}</p>
+            <p>{{path}}</p>
         </label>
 
         <input type="checkbox" id="{{path}}"/>
@@ -19,7 +19,7 @@
 
 
     {{#if is_file}}
-        <a href="/files/{{path}}"><h3>{{name}}</h3></a>
+        <a href="/files/{{path}}"><h3>{{name}}</h3><p>{{path}}</p></a>
     {{/if}}
 
 </li>
