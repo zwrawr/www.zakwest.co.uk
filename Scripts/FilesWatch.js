@@ -1,7 +1,7 @@
 var fs = require('fs');
 var util = require('util');
 // Constants
-function get_ROOT_DIR_PATH() { return "C:/Users/Zak/Source/Repos/Website/Website/Public"; }
+function get_ROOT_DIR_PATH() { return "C:/Users/Zak/Source/Repos/Website/Website/Public/files"; }
 function get_FILES_JSON_PATH() { return 'C:/Users/Zak/Source/Repos/Website/Website/Data/files.json'; }
 
 function registerWatch(){
