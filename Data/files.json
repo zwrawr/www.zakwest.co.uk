@@ -1,86 +1,159 @@
-
 {
-    "is_folder":true,
-    "tag":"org",
-    "is_file":false,
-    "path":"",
-    "name":"files",
-    "children":[
-        {
-           "is_folder":true,
-           "tag":"org",
-           "is_file":false,
-           "path":"uni",
-           "name":"uni",
-           "children":[
-              {
-                 "is_folder":true,
-                 "tag":"org",
-                 "is_file":false,
-                 "path":"uni/flocking",
-                 "name":"flocking",
-                 "children":[
-                    {
-                       "mod_time":"2016-06-25 07:42:59.687973",
-                       "is_folder":false,
-                       "tag":"org",
-                       "is_file":true,
-                       "path":"uni/flocking/Flocking.jar",
-                       "name":"Flocking.jar"
-                    }
-                 ]
-              }
-           ]
-        },
-        {
-           "is_folder":true,
-           "tag":"org",
-           "is_file":false,
-           "path":"ludumdare",
-           "name":"ludumdare",
-           "children":[
-              {
-                 "is_folder":true,
-                 "tag":"org",
-                 "is_file":false,
-                 "path":"ludumdare/LD35",
-                 "name":"LD35",
-                 "children":[
-                    {
-                       "mod_time":"2016-06-25 07:42:59.819972",
-                       "is_folder":false,
-                       "tag":"org",
-                       "is_file":true,
-                       "path":"ludumdare/LD35/GeoRun_Win.zip",
-                       "name":"GeoRun_Win.zip"
-                    },
-                    {
-                       "mod_time":"2016-06-25 07:42:59.863973",
-                       "is_folder":false,
-                       "tag":"org",
-                       "is_file":true,
-                       "path":"ludumdare/LD35/GeoRun_OSX.zip",
-                       "name":"GeoRun_OSX.zip"
-                    }
-                 ]
-              }
-           ]
-        },
-        {
-           "mod_time":"2016-09-30 10:05:01.719120",
-           "is_folder":false,
-           "tag":"org",
-           "is_file":true,
-           "path":"index.html",
-           "name":"index.html"
-        },
-        {
-           "mod_time":"2016-09-28 06:59:18.731121",
-           "is_folder":false,
-           "tag":"org",
-           "is_file":true,
-           "path":"gen_folderdata.py",
-           "name":"gen_folderdata.py"
-        }
-    ]
+	"is_folder": true,
+	"is_file": false,
+	"path": "",
+	"name": "files",
+	"children": [
+		{
+			"name": "css",
+			"path": "/css",
+			"is_folder": true,
+			"children": [
+				{
+					"name": "main.css",
+					"path": "/css/main.css",
+					"is_file": true,
+					"mod_time": "2017-03-10T20:01:36.266Z"
+				}
+			]
+		},
+		{
+			"name": "data",
+			"path": "/data",
+			"is_folder": true,
+			"children": [
+				{
+					"name": "Test.txt",
+					"path": "/data/Test.txt",
+					"is_file": true,
+					"mod_time": "2017-03-10T18:53:08.066Z"
+				}
+			]
+		},
+		{
+			"name": "favicon.png",
+			"path": "/favicon.png",
+			"is_file": true,
+			"mod_time": "2016-11-01T14:03:04.763Z"
+		},
+		{
+			"name": "img",
+			"path": "/img",
+			"is_folder": true,
+			"children": [
+				{
+					"name": "content",
+					"path": "/img/content",
+					"is_folder": true,
+					"children": [
+						{
+							"name": "Blog.svg",
+							"path": "/img/content/Blog.svg",
+							"is_file": true,
+							"mod_time": "2016-12-29T11:50:42.077Z"
+						},
+						{
+							"name": "Files.svg",
+							"path": "/img/content/Files.svg",
+							"is_file": true,
+							"mod_time": "2016-12-29T14:44:44.068Z"
+						},
+						{
+							"name": "GitHub.svg",
+							"path": "/img/content/GitHub.svg",
+							"is_file": true,
+							"mod_time": "2016-12-29T14:44:00.470Z"
+						},
+						{
+							"name": "LinkedIn.svg",
+							"path": "/img/content/LinkedIn.svg",
+							"is_file": true,
+							"mod_time": "2017-01-26T01:07:11.838Z"
+						},
+						{
+							"name": "LudumDare.svg",
+							"path": "/img/content/LudumDare.svg",
+							"is_file": true,
+							"mod_time": "2016-12-29T14:42:57.988Z"
+						},
+						{
+							"name": "Twitter.svg",
+							"path": "/img/content/Twitter.svg",
+							"is_file": true,
+							"mod_time": "2016-12-29T14:42:29.501Z"
+						},
+						{
+							"name": "YouTube.svg",
+							"path": "/img/content/YouTube.svg",
+							"is_file": true,
+							"mod_time": "2016-12-29T14:41:54.773Z"
+						}
+					]
+				},
+				{
+					"name": "files",
+					"path": "/img/files",
+					"is_folder": true,
+					"children": [
+						{
+							"name": "collapsed.svg",
+							"path": "/img/files/collapsed.svg",
+							"is_file": true,
+							"mod_time": "2017-03-05T14:54:27.251Z"
+						},
+						{
+							"name": "expanded.svg",
+							"path": "/img/files/expanded.svg",
+							"is_file": true,
+							"mod_time": "2017-03-05T14:53:25.741Z"
+						},
+						{
+							"name": "file.svg",
+							"path": "/img/files/file.svg",
+							"is_file": true,
+							"mod_time": "2017-03-05T14:39:41.226Z"
+						},
+						{
+							"name": "folder.svg",
+							"path": "/img/files/folder.svg",
+							"is_file": true,
+							"mod_time": "2017-03-05T14:43:46.330Z"
+						}
+					]
+				},
+				{
+					"name": "header",
+					"path": "/img/header",
+					"is_folder": true,
+					"children": [
+						{
+							"name": "background.jpg",
+							"path": "/img/header/background.jpg",
+							"is_file": true,
+							"mod_time": "2016-11-01T14:03:04.184Z"
+						}
+					]
+				},
+				{
+					"name": "Headshot.jpg",
+					"path": "/img/Headshot.jpg",
+					"is_file": true,
+					"mod_time": "2017-03-04T18:28:49.855Z"
+				}
+			]
+		},
+		{
+			"name": "js",
+			"path": "/js",
+			"is_folder": true,
+			"children": [
+				{
+					"name": "menu.js",
+					"path": "/js/menu.js",
+					"is_file": true,
+					"mod_time": "2017-03-01T12:23:44.303Z"
+				}
+			]
+		}
+	]
 }

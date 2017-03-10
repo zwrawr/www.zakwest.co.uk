@@ -186,8 +186,10 @@
         margin-bottom: 1%;
         margin-top: 1%;
 
-        p{
+        min-width: 200px;
 
+        p{
+            text-align: left;
         }
     }
 
@@ -202,14 +204,16 @@
         margin-bottom: 1%;
         margin-top: 1%;
 
-        p{
+        min-width: 200px;
 
+        p{
+            text-align: right;
         }
     }
 
     // clear fix
     &:after {
-        content: "";
+        content: " ";
         display: table;
         clear: both;
     }

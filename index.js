@@ -4,6 +4,8 @@ var fs = require('fs');
 // import our auto json reloader
 var autoJson = require('./Scripts/autoReloadJson');
 
+require('./Scripts/FilesWatch').registerWatch();
+
 // import express
 var express = require('express');
 var app = express();
