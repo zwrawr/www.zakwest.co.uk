@@ -5,8 +5,15 @@
   "description": "The source of the website residing at https://zakwest.tech",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+
+    "build": "npm run build:server_js & npm run build:client_js",
+
+    "prebuild:server_js": "mkdir -p Built/Scripts",
+    "build:server_js": "cp Source/Scripts/*.js Built/Scripts",
+
+    "prebuild:js" : "mkdir -p tmp/Source/Public/js/ & mkdir -p Built/Public/js",
+    "build:client_js": "for file in Source/Public/js/*.js; do uglifyjs $file --output tmp/$file --compress --mangle; done && cp tmp/Source/Public/js/*.js Built/Public/js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +32,7 @@
     "markdown-it": "^8.3.0",
     "markdown-it-container": "^2.0.0",
     "markdown-it-highlightjs": "^3.0.0",
-    "node-sass": "^4.5.0"
+    "node-sass": "^4.5.0",
+    "uglify-js": "^2.8.12"
   }
 }
