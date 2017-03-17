@@ -33,8 +33,13 @@ var md = require('markdown-it')
     .use(container, "left")
     .use(highlight);
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main',
+    layoutsDir:'Built/Views/Layouts',
+    partialsDir:'Built/Views/Partials'
+}));
 app.set('view engine','handlebars');
+app.set('views',__dirname + '/Views');
 
 // Set port
 app.set('port', process.env.PORT || 3000);
@@ -102,7 +107,7 @@ app.get('/pages/:page',function(req,res,next){
         return;
     }
 
-    var mddata = md.render(fs.readFileSync(pages.pages[i].filepath).toString('utf8'));
+    var mddata = md.render(fs.readFileSync("Built/"+pages.pages[i].filepath).toString('utf8'));
 
     var pageJson =
     {

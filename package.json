@@ -5,7 +5,8 @@
   "description": "The source of the website residing at https://zakwest.tech",
   "main": "index.js",
   "scripts": {
-    "start": "node Built/index.js",
+
+    "start": "if test -e Built/index.js ;  then node Built/index.js;  else echo \"Error: Cannot find index.js, has the prackage been built?\"; fi",
 
     "clean":"rm -rf tmp && rm -rf Built",
 
@@ -28,7 +29,7 @@
     "build:images":"cp -r Source/Public/img/* Built/Public/img",
 
     "prebuild:data":"mkdir -p Built/Data & mkdir -p tmp/Source/Data",
-    "build:data":"cp Source/Data/*.md Built/Data & for file in Source/Data/*.json; do uglifyjs --expr $file --output tmp/$file; done && cp tmp/Source/Data/*.json Built/Data",
+    "build:data":"cp Source/Data/*.md Built/Data && cp Source/Data/*.json Built/Data",
 
     "prebuild:files":"mkdir -p Built/Public/files",
     "build:files":"cp -r Source/Public/files Built/Public/files"
