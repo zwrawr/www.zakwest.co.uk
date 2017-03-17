@@ -17,19 +17,21 @@ app.disable('x-powered-by');
 var exphbs = require('express-handlebars');
 
 // Set up for markdown-it
-var md = require('markdown-it')({
-  html:         true,
-  breaks:       true,
-  langPrefix:   'lang-',
-  linkify:      true,
-  typographer:  true,
-  quotes: '“”‘’'
-}).use(
-    require('markdown-it-container'), "right"
-).use(
-    require('markdown-it-container'), "left"
-).use(
-    require('markdown-it-highlightjs'));
+var container = require("markdown-it-container");
+var highlight = require("markdown-it-highlightjs");
+
+var md = require('markdown-it')
+    ({
+        html:         true,
+        breaks:       true,
+        langPrefix:   'lang-',
+        linkify:      true,
+        typographer:  true,
+        quotes: '“”‘’'
+    })
+    .use(container, "right")
+    .use(container, "left")
+    .use(highlight);
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine','handlebars');
@@ -38,7 +40,9 @@ app.set('view engine','handlebars');
 app.set('port', process.env.PORT || 3000);
 
 // Set up static file hosting
-app.use(express.static(__dirname + '/Public'))
+app.use(express.static(__dirname + '/Public'));
+
+console.log(__dirname);
 
 /*
 * Routes
@@ -58,8 +62,8 @@ app.get('/',function(req,res){
 
     var pageJson =
     {
-        "site" : autoJson.getJson("Data/site.json"),
-        "home" : autoJson.getJson('Data/home.json')
+        "site" : autoJson.getJson("Built/Data/site.json"),
+        "home" : autoJson.getJson('Built/Data/home.json')
     };
 
     res.render('home', pageJson);
@@ -70,8 +74,8 @@ app.get('/Files',function(req,res){
 
     var pageJson =
     {
-        "site" : autoJson.getJson("Data/site.json"),
-        "files" : autoJson.getJson('Data/files.json')
+        "site" : autoJson.getJson("Built/Data/site.json"),
+        "files" : autoJson.getJson('Built/Data/files.json')
     };
 
     res.render('files', pageJson);
@@ -80,7 +84,7 @@ app.get('/Files',function(req,res){
 // About page
 app.get('/pages/:page',function(req,res,next){
 
-    var pages = autoJson.getJson("Data/pages.json");
+    var pages = autoJson.getJson("Built/Data/pages.json");
     var exists = false;
     var index = -1;
     for (var i in pages.pages){
@@ -102,7 +106,7 @@ app.get('/pages/:page',function(req,res,next){
 
     var pageJson =
     {
-        "site"  : autoJson.getJson("Data/site.json"),
+        "site"  : autoJson.getJson("Built/Data/site.json"),
         "post" : {
             "markdown" : mddata
         }
@@ -125,7 +129,7 @@ app.use(function(req,res){
 
     var pageJson =
     {
-        "site" : autoJson.getJson("Data/site.json"),
+        "site" : autoJson.getJson("Built/Data/site.json"),
         "error" : {
             "code": "404",
             "name" : "Page not found",
@@ -145,7 +149,7 @@ app.use(function(err, req, res, next){
 
     var pageJson =
     {
-        "site" : autoJson.getJson("Data/site.json"),
+        "site" : autoJson.getJson("Built/Data/site.json"),
         "error" : {
             "code": "500",
             "name" : "Server error",

@@ -5,12 +5,12 @@
   "description": "The source of the website residing at https://zakwest.tech",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node Built/index.js",
 
     "clean":"rm -rf tmp && rm -rf Built",
 
     "prebuild":"mkdir -p Built",
-    "build": "npm run build:server_js & npm run build:client_js & npm run build:veiws & npm run build:styles & npm run build:images",
+    "build": "npm run build:server_js & npm run build:client_js & npm run build:veiws & npm run build:styles & npm run build:images & npm run build:data & npm run build:files",
 
     "prebuild:server_js": "mkdir -p Built/Scripts",
     "build:server_js": "cp Source/Scripts/*.js Built/Scripts & cp Source/*.js Built",
@@ -25,7 +25,13 @@
     "build:styles":"node-sass Source/Styles/ --output-style compressed --output Built/Public/css/",
     
     "prebuild:images":"mkdir -p Built/Public/img && mkdir -p Built/Public/img/content && mkdir -p Built/Public/img/files && mkdir -p Built/Public/img/header",
-    "build:images":"cp -r Source/Public/img/* Built/Public/img"
+    "build:images":"cp -r Source/Public/img/* Built/Public/img",
+
+    "prebuild:data":"mkdir -p Built/Data & mkdir -p tmp/Source/Data",
+    "build:data":"cp Source/Data/*.md Built/Data & for file in Source/Data/*.json; do uglifyjs --expr $file --output tmp/$file; done && cp tmp/Source/Data/*.json Built/Data",
+
+    "prebuild:files":"mkdir -p Built/Public/files",
+    "build:files":"cp -r Source/Public/files Built/Public/files"
 
   },
   "repository": {
@@ -41,7 +47,7 @@
   "dependencies": {
     "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
-    "fs": "0.0.1-security",
+    "fs": "0.0.2",
     "markdown-it": "^8.3.0",
     "markdown-it-container": "^2.0.0",
     "markdown-it-highlightjs": "^3.0.0",
