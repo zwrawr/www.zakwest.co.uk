@@ -1,0 +1,35 @@
+
+// images
+$background-image: "/img/header/background.jpg";
+
+// colors
+$background-color: #131515;
+$header-text-color: #ecf0f1;
+
+$button-color-hover: #2ecc71;
+$button-color-normal: #27ae60;
+
+$basicallywhite: #eeeeee;
+$nearwhite : #eee;
+$offwhite : #ddd;
+
+$error-500-color : #c0392b;
+$error-404-color : #d35400;
+
+
+// import fonts
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Source+Code+Pro');
+// font stack
+$default-fontstack: 'Open Sans', sans-serif;
+$serif-fontstack: 'Merriweather', serif;
+$mono-fontstack: 'Source Code Pro', monospace;
+
+
+// default font sizes
+$default-h1-size: 26pt;
+$default-h2-size: 20pt;
+$default-h3-size: 16pt;
+$default-h4-size: 14pt;
+$default-h5-size: 12pt;
+
+$default-p-size : 11pt;

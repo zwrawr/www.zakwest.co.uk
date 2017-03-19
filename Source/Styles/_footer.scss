@@ -1,0 +1,16 @@
+.page-footer{
+
+    .footer-nav
+    {
+        margin: 0px;
+        ul.nav-links{
+            @include navbar;
+        }
+    }
+
+    #copyright
+    {
+        text-align: center;
+        color: $offwhite;
+    }
+}

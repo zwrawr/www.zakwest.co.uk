@@ -1,0 +1,22 @@
+{
+    "pages":[
+
+        {
+            "name" : "about",
+            "type" : "markdown",
+            "filepath" : "Data/about.md"
+        },
+
+        {
+            "name" : "markdowntest",
+            "type" : "markdown",
+            "filepath" : "Data/markdowntest.md"
+        },
+
+        {
+            "name" : "contact",
+            "type" : "markdown",
+            "filepath" : "Data/contact.md"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+
+a:link
+{
+    text-decoration:none;
+}
+
+a.nounderline:link
+{
+    text-decoration:none;
+}
+
+a.underline:link
+{
+    text-decoration:underline;
+}
+
+body{
+    background-color: $background-color;
+    margin: 0px;
+}
+
+.page{
+    width : 100%;
+    height: auto;
+}
+
+
+h1{ font-family: $default-fontstack; font-size: $default-h1-size; margin:0px; }
+h2{ font-family: $default-fontstack; font-size: $default-h2-size; margin:0px; }
+h3{ font-family: $default-fontstack; font-size: $default-h3-size; margin:0px; }
+h4{ font-family: $default-fontstack; font-size: $default-h4-size; margin:0px; }
+h5{ font-family: $default-fontstack; font-size: $default-h5-size; margin:0px; }
+p { font-family: $default-fontstack; font-size: $default-p-size;  margin:0px; }

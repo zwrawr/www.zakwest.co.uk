@@ -1,0 +1,68 @@
+{
+	"cells" : [
+
+		{
+			"address" : "https://blog.zakwest.tech" ,
+			"target" : "_blank",
+			"title" : "Blog",
+			"description" : "My Blog about electronics and computing",
+			"image" : "/img/content/Blog.svg",
+			"image_desc" : "Blog screenshot"
+		},
+
+		{
+			"address" : "https://www.twitter.com/zwrawr" ,
+			"target" : "_blank",
+			"title" : "Twitter",
+			"description" : "Follow me on twitter",
+			"image" : "/img/content/Twitter.svg",
+			"image_desc" : "Twitter logo"
+		},
+
+		{
+			"address" : "https://www.github.com/zwrawr" ,
+			"target" : "_blank",
+			"title" : "GitHub",
+			"description" : "Veiw my projects",
+			"image" : "/img/content/GitHub.svg",
+			"image_desc" : "github logo"
+		},
+
+		{
+			"address" : "https://www.youtube.com/channel/UC3OG7zVBvAsvJojeH2tVGbg" ,
+			"target" : "_blank",
+			"title" : "Youtube",
+			"description" : "Watch my channel",
+			"image" : "/img/content/YouTube.svg",
+			"image_desc" : "youtube logo"
+		},
+
+		{
+			"address" : "https://www.ludumdare.com/compo/author/zwrawr/" ,
+			"target" : "_blank",
+			"title" : "Ludum Dare",
+			"description" : "The trice yearly 48h game programming jam",
+			"image" : "/img/content/LudumDare.svg",
+			"image_desc" : "Ludum dare art"
+		},
+
+		{
+			"address" : "https://uk.linkedin.com/in/zakrawest" ,
+			"target" : "_blank",
+			"title" : "Linkedin",
+			"description" : "Vist my linkedin",
+			"image" : "/img/content/LinkedIn.svg",
+			"image_desc" : "linked in logo"
+		},
+
+		{
+			"address" : "/files/",
+			"target" : "_blank",
+			"title" : "Files",
+			"description" : "Downloads",
+			"image" : "/img/content/Files.svg",
+			"image_desc" : "folder logo"
+		}
+	]
+
+}
