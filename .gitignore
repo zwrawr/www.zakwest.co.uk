@@ -1,6 +1,7 @@
 node_modules
 
-Source/Public/files/*
+# Will deal with ignoring the contents of this folder in a seperate .gitignore
+#Source/Public/files/*
 
 Built/
 
