@@ -5,13 +5,13 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/var/www/www.zakwest.tech/
-User=homepage
-Group=homepage
-ExecStart=/usr/bin/npm start --production
-ExecStop=/usr/bin/npm stop --production
+User=zakwest.tech
+Group=zakwest.tech
+ExecStart=/usr/bin/npm start
+ExecStop=/usr/bin/npm stop
 Restart=always
 SyslogIdentifier=zakwest.tech
 
 [Install]
-Wanted-By=multi-user.target
+WantedBy=multi-user.target
 

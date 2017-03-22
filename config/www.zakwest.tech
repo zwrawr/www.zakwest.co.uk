@@ -1,5 +1,5 @@
 
-server{
+server {
     listen 443 ssl;
     server_name www.zakwest.tech zakwest.tech;
 
@@ -17,21 +17,23 @@ server{
     add_header Strict-Transport-Security max-age=15768000;
     ssl on;
 
-    gzip on;
-    gzip_types text/plain application/xml text/css text/javascript text/xml text/json application/javascript application/json image/svg+xml
-    gzip proxied no-cache no-store private expired auth;
+    root /var/www/www.zakwest.tech;
+    index index.html;    
+
+    gzip_types text/plain application/xml text/css text/javascript text/xml text/json application/javascript application/json image/svg+xml;
+    gzip_proxied any;
     gzip_min_length 500;
-    gunzip on;
+    gzip on;
     gzip_vary on;
 
-    root /var/www/www.zakwest.tech;
+    gunzip on;
 
     location / {
-        proxy_set_header X-Forwarded-For $proxy-add-x-forwarded-for;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header Host $http_host;
         proxy_set_header X-Forwarded-Proto $scheme;
 
-        proxy_pass https://localhost:/3000;
+        proxy_pass http://localhost:3000;
         proxy_buffering off;
     }
     location ~ /.well-known{
@@ -41,7 +43,7 @@ server{
 
 server {
     listen 80;
-    sever_name www.zakwest.tech zakwest.tech
+    server_name www.zakwest.tech zakwest.tech;
     return 301 https://$host$request_uri;
 }
 
