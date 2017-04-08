@@ -62,6 +62,7 @@ app.use(function(req,res,next){
     next();
 });
 
+
 // Home page
 app.get('/',function(req,res){
 
@@ -75,7 +76,7 @@ app.get('/',function(req,res){
 });
 
 // Files page
-app.get('/Files',function(req,res){
+app.get('/files',function(req,res){
 
     var pageJson =
     {
@@ -120,6 +121,8 @@ app.get('/pages/:page',function(req,res,next){
     res.render('post', pageJson);
 });
 
+// Set up static file hosting
+app.use(express.static(__dirname + '/Public'));
 
 
 // Redirect to /blog to blog.zakwest.tech
@@ -169,3 +172,4 @@ app.use(function(err, req, res, next){
 app.listen(app.get('port'), function(){
     console.log("Express started in http://localhost:" + app.get('port'));
 });
+
