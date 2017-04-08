@@ -17,8 +17,7 @@ server {
     add_header Strict-Transport-Security max-age=15768000;
     ssl on;
 
-    root /var/www/www.zakwest.tech;
-    index index.html;    
+    root /var/www/www.zakwest.tech;    
 
     gzip_types text/plain application/xml text/css text/javascript text/xml text/json application/javascript application/json image/svg+xml;
     gzip_proxied any;
