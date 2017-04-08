@@ -1,0 +1,17 @@
+[Unit]
+Description=zakwest.tech: Zak West's personal web site
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/www.zakwest.tech/
+User=Vagrant
+Group=Vagrant
+ExecStart=/usr/bin/npm start
+ExecStop=/usr/bin/npm stop
+Restart=always
+SyslogIdentifier=zakwest.tech
+
+[Install]
+WantedBy=multi-user.target
+
