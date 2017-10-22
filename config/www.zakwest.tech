@@ -46,4 +46,11 @@ server {
     return 301 https://$host$request_uri;
 }
 
-
+server {
+  server_name .zakwest.co.uk;
+  return 301 zakwest.tech$request_uri;
+}
+server {
+  server_name .zakwest.uk;
+  return 301 zakwest.tech$request_uri;
+}
