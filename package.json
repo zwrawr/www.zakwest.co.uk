@@ -31,7 +31,7 @@
     "build:data": "cp Source/Data/*.md Built/Data && cp Source/Data/*.json Built/Data",
 
     "prebuild:files": "mkdir -p Built/Public/files",
-    "build:files": "cp -r Source/Public/files Built/Public/files"
+    "build:files": "cp -r Source/Public/files/* Built/Public/files/"
   },
   "repository": {
     "type": "git",

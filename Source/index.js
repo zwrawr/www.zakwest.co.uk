@@ -121,10 +121,6 @@ app.get('/pages/:page',function(req,res,next){
     res.render('post', pageJson);
 });
 
-// Set up static file hosting
-app.use(express.static(__dirname + '/Public'));
-
-
 // Redirect to /blog to blog.zakwest.tech
 app.get('/blog', function(req,res){
     return res.redirect(303, "https://blog.zakwest.tech");

@@ -2,8 +2,8 @@
 @mixin navbar {
     margin: 0px;
 
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 0.5% 10%;
+
 
     display:flex;
     list-style: none;
@@ -12,27 +12,26 @@
 
     background: $background-color;
     li {
-        display: inline;
-
-        width: auto;
-        height: auto;
-        margin-top: 1%;
-        margin-bottom: 1%;
         margin-left: 0.5%;
         margin-right: 0.5%;
-
-        padding: 1% 2%;
         background-color: $button-color-normal;
 
-        text-align: center;
         a{
-            text-align: center;
             text-decoration:none;
 
-            color: $header-text-color;
-            h4{
+			color: $header-text-color;
+			div{
+				width: 6rem;
+				height: 3rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				h4{
+					vertical-align: middle;
+					text-align: center;
+				}
+			}
 
-            }
         }
         &:hover{
             background-color: $button-color-hover;

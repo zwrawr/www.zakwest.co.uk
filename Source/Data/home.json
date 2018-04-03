@@ -38,7 +38,7 @@
 		},
 
 		{
-			"address" : "https://www.ludumdare.com/compo/author/zwrawr/" ,
+			"address" : "https://ldjam.com/users/zwrawr/" ,
 			"target" : "_blank",
 			"title" : "Ludum Dare",
 			"description" : "The trice yearly 48h game programming jam",
@@ -62,6 +62,24 @@
 			"description" : "Downloads",
 			"image" : "/img/content/Files.svg",
 			"image_desc" : "folder logo"
+		},
+
+		{
+			"address" : "/files/ludumdare/stats/",
+			"target" : "_blank",
+			"title" : "LDStats",
+			"description" : "Ludum Dare statitics tracking",
+			"image" : "/img/content/LDStats.svg",
+			"image_desc" : "ludum dare statistics"
+		},
+
+		{
+			"address" : "https://sourcerer.io/zwrawr",
+			"target" : "_blank",
+			"title" : "sourcerer.io",
+			"description" : "A visual profile for SWEs ",
+			"image" : "/img/content/sourcerer.svg",
+			"image_desc" : "sourcerer io"
 		}
 	]
 
