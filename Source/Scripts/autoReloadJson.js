@@ -1,7 +1,7 @@
 // import file system
 var fs = require('fs');
 
-var updatetimeinms = 1000; //1000*60*5; // 2 mins
+var updatetimeinms = 1000*60*1; // 2 mins
 var loadedJson = {};
 
 function getJson(path){
@@ -24,6 +24,6 @@ function getJson(path){
     }
 
     return loadedJson[path]["data"];
-};
+}
 
 exports.getJson = getJson;
