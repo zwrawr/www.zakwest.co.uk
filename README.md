@@ -18,11 +18,11 @@ To rebuild the site via npm run the following commands.
 ### Restart
 If changes have been made to the site, then you'll have to restart the node app.
 ```bash
-	sudo service restart www.zakwest.tech
+	sudo service www.zakwest.tech restart
 ```
 If changes have been made to the nginx config, then you'll have to restart nginx.
 ```bash
-	sudo service restart nginx
+	sudo restart nginx service
 ```
 
 ### Clean
