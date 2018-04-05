@@ -5,33 +5,24 @@
   "description": "The source of the website residing at https://zakwest.tech",
   "main": "index.js",
   "scripts": {
-
     "start": "if test -e Built/index.js ;  then node Built/index.js;  else echo \"Error: Cannot find index.js, has the prackage been built?\"; fi",
     "clean": "rm -rf tmp && rm -rf Built",
-
     "prebuild": "mkdir -p Built",
     "build": "npm run build:server_js & npm run build:client_js & npm run build:veiws & npm run build:styles & npm run build:images & npm run build:data & npm run build:files",
-
     "prebuild:server_js": "mkdir -p Built/Scripts",
     "build:server_js": "cp Source/Scripts/*.js Built/Scripts & cp Source/*.js Built",
-
     "prebuild:client_js": "mkdir -p tmp/Source/Public/js/ & mkdir -p Built/Public/js",
     "build:client_js": "for file in Source/Public/js/*.js; do uglifyjs $file --output tmp/$file --compress --mangle; done && cp tmp/Source/Public/js/*.js Built/Public/js",
-
     "prebuild:veiws": "mkdir -p Built/Views && mkdir -p Built/Views/Layouts && mkdir -p Built/Views/Partials",
     "build:veiws": "cp Source/Views/*.handlebars Built/Views & cp Source/Views/Layouts/*.handlebars Built/Views/Layouts & cp Source/Views/Partials/*.handlebars Built/Views/Partials",
-
     "prebuild:styles": "mkdir -p Built/Public/css",
     "build:styles": "node-sass Source/Styles/ --output-style compressed --output Built/Public/css/",
-
     "prebuild:images": "mkdir -p Built/Public/img && mkdir -p Built/Public/img/content && mkdir -p Built/Public/img/files && mkdir -p Built/Public/img/header",
     "build:images": "cp -r Source/Public/img/* Built/Public/img",
-
     "prebuild:data": "mkdir -p Built/Data & mkdir -p tmp/Source/Data",
     "build:data": "cp Source/Data/*.md Built/Data && cp Source/Data/*.json Built/Data",
-
     "prebuild:files": "mkdir -p Built/Public/files",
-    "build:files": "cp -r Source/Public/files/* Built/Public/files/"
+    "build:files": "cp -r Source/Public/files Built/Public/files"
   },
   "repository": {
     "type": "git",
