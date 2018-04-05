@@ -7,6 +7,7 @@ function get_FILES_JSON_PATH() { return './Built/Data/files.json'; }
 
 function registerWatch(){
 
+	console.log(process.cwd());
     console.log(get_ROOT_DIR_PATH());
     console.log(get_FILES_JSON_PATH());
 

@@ -17,6 +17,6 @@
             "name" : "contact",
             "type" : "markdown",
             "filepath" : "Data/contact.md"
-        }
+		}
     ]
 }
