@@ -4,6 +4,7 @@
 		{
 			"address" : "https://blog.zakwest.tech" ,
 			"target" : "_blank",
+			"rel" : "noopener",
 			"title" : "Blog",
 			"description" : "My Blog about electronics and computing",
 			"image" : "/img/content/Blog.svg",
@@ -13,6 +14,7 @@
 		{
 			"address" : "https://www.twitter.com/zwrawr" ,
 			"target" : "_blank",
+			"rel" : "noopener",
 			"title" : "Twitter",
 			"description" : "Follow me on twitter",
 			"image" : "/img/content/Twitter.svg",
@@ -22,6 +24,7 @@
 		{
 			"address" : "https://www.github.com/zwrawr" ,
 			"target" : "_blank",
+			"rel" : "noopener",
 			"title" : "GitHub",
 			"description" : "Veiw my projects",
 			"image" : "/img/content/GitHub.svg",
@@ -31,6 +34,7 @@
 		{
 			"address" : "https://www.youtube.com/channel/UC3OG7zVBvAsvJojeH2tVGbg" ,
 			"target" : "_blank",
+			"rel" : "noopener",
 			"title" : "Youtube",
 			"description" : "Watch my channel",
 			"image" : "/img/content/YouTube.svg",
@@ -40,6 +44,7 @@
 		{
 			"address" : "https://ldjam.com/users/zwrawr/" ,
 			"target" : "_blank",
+			"rel" : "noopener",
 			"title" : "Ludum Dare",
 			"description" : "The trice yearly 48h game programming jam",
 			"image" : "/img/content/LudumDare.svg",
@@ -49,6 +54,7 @@
 		{
 			"address" : "https://uk.linkedin.com/in/zakrawest" ,
 			"target" : "_blank",
+			"rel" : "noopener",
 			"title" : "Linkedin",
 			"description" : "Vist my linkedin",
 			"image" : "/img/content/LinkedIn.svg",
@@ -57,7 +63,7 @@
 
 		{
 			"address" : "/files/",
-			"target" : "_blank",
+			"target" : "_self",
 			"title" : "Files",
 			"description" : "Downloads",
 			"image" : "/img/content/Files.svg",
@@ -67,6 +73,7 @@
 		{
 			"address" : "/files/ludumdare/stats/",
 			"target" : "_blank",
+			"rel" : "noopener",
 			"title" : "LDStats",
 			"description" : "Ludum Dare statitics tracking",
 			"image" : "/img/content/LDStats.svg",
@@ -76,6 +83,7 @@
 		{
 			"address" : "https://sourcerer.io/zwrawr",
 			"target" : "_blank",
+			"rel" : "noopener",
 			"title" : "sourcerer.io",
 			"description" : "A visual profile for SWEs ",
 			"image" : "/img/content/sourcerer.svg",
