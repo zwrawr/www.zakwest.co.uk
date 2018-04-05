@@ -1,34 +1,20 @@
-# ww.zakwest.tech
-This is the source for my website [www.zakwest.tech](https://www.zakwest.tech). It's built using Node.js, Express.js, handlebars.js and sass.
-
-![Image of the zakwest.tech site](https://www.zakwest.tech/files/Github/www.zakwest.tech/www.zakwest.tech.png)
+# ZakWest.tech
+This is the source for my website [www.zakwest.tech](https://www.zakwest.tech). It's built using Node,
+Express, handlebars, markdown-it and sass.
 
 ## Building and Running
-### Setup
-Head over to the [dev.zakwest.tech](https://github.com/zwrawr/dev.zakwest.tech) repo to find out how to use vagrant to host this project.
-The provisioning script deals with all the installation and setup and make the site avaliable at www.dev.zakwest.tech .
+### Basic setup
+These step will install build and start the express app on port 3000. They should be ran from within the projects root folder.
+1. run ```npm install``` to install all the node dependicys
+2. run ```npm build``` to build the node dependancys
+3. run ```npm run build``` to build the project
+4. run ```npm run start``` to start the project
 
-### Rebuild
-To rebuild the site via npm run the following commands.
-```bash
-    cd /var/www/www.zakwest.tech/
-    npm run build
-```
+### Connecting to nginx and starting automaticaly on boot
+The files within the [config](/config) directory give a template for nginx configuration as well as a configaration for systemd.
 
-### Restart
-If changes have been made to the site, then you'll have to restart the node app.
-```bash
-	sudo service www.zakwest.tech restart
-```
-If changes have been made to the nginx config, then you'll have to restart nginx.
-```bash
-	sudo restart nginx service
-```
+### Clean up
+There is also a clean command ```npm run clean``` that will clean up any tmp folders as well as
+any folders and files that are generated as part of the build process.
 
-### Clean
-To remove all the built files do
-```bash
-    cd /var/www/www.zakwest.tech/
-    npm run clean
-```
 

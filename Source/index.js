@@ -69,11 +69,7 @@ app.get('/',function(req,res){
     var pageJson =
     {
         "site" : autoJson.getJson("Built/Data/site.json"),
-		"home" : autoJson.getJson('Built/Data/home.json'),
-		"head" : {
-			"title" : "Home",
-			"desc" : "Homepage for zakwest.tech, see all the places you can find me on the web"
-		}
+        "home" : autoJson.getJson('Built/Data/home.json')
     };
 
     res.render('home', pageJson);
@@ -85,11 +81,7 @@ app.get('/files',function(req,res){
     var pageJson =
     {
         "site" : autoJson.getJson("Built/Data/site.json"),
-		"files" : autoJson.getJson('Built/Data/files.json'),
-		"head" : {
-			"title" : "Downloads",
-			"desc" : "Download files from zakwest.tech"
-		}
+        "files" : autoJson.getJson('Built/Data/files.json')
     };
 
     res.render('files', pageJson);
@@ -123,15 +115,15 @@ app.get('/pages/:page',function(req,res,next){
         "site"  : autoJson.getJson("Built/Data/site.json"),
         "post" : {
             "markdown" : mddata
-		},
-		"head" : {
-			"title" : req.params.page + " page",
-			"desc" : req.params.page + " page"
-		}
+        }
     };
 
     res.render('post', pageJson);
 });
+
+// Set up static file hosting
+app.use(express.static(__dirname + '/Public'));
+
 
 // Redirect to /blog to blog.zakwest.tech
 app.get('/blog', function(req,res){
@@ -150,11 +142,7 @@ app.use(function(req,res){
             "code": "404",
             "name" : "Page not found",
             "desc" : "We were not able to find the page you were looking for, sorry!"
-		},
-		"head" : {
-			"title" : "404",
-			"desc" : "Page not Found, Code 500"
-		}
+        }
     };
 
     res.render('error', pageJson);
@@ -174,11 +162,7 @@ app.use(function(err, req, res, next){
             "code": "500",
             "name" : "Server error",
             "desc" : "We experienced an unexpected error and were unable to retrive the page you were looking for."
-		},
-		"head" : {
-			"title" : "500",
-			"desc" : "Server Error, Code 500"
-		}
+        }
     };
 
     res.render('error', pageJson);

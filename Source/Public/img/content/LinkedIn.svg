@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg5291"
+   viewBox="0 0 885.8268 885.8268"
+   height="250mm"
+   width="250mm"
    version="1.1"
-   width="1000"
-   height="1000"
-   viewBox="0 0 937.50002 937.50002">
+   id="svg5291">
   <metadata
      id="metadata5297">
     <rdf:RDF>
@@ -25,28 +25,28 @@
   <defs
      id="defs5295" />
   <rect
-     style="fill:#0077b5;fill-opacity:1;stroke:none;stroke-width:1.05833328;stroke-opacity:1"
-     id="rect5301"
-     width="937.5"
-     height="937.5"
+     y="0.00080042559"
      x="0"
-     y="-1.4077954e-05" />
+     height="885.82678"
+     width="885.82678"
+     id="rect5301"
+     style="fill:#0077b5;fill-opacity:1;stroke:none;stroke-opacity:1" />
   <ellipse
-     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0517441;stroke-opacity:1"
+     ry="56.900578"
+     rx="56.952484"
+     cy="268.96976"
+     cx="260.00076"
      id="path5843"
-     cx="278.99173"
-     cy="257.90091"
-     rx="59.899437"
-     ry="59.844849" />
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1" />
   <rect
-     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0517441;stroke-opacity:1"
+     y="368.43039"
+     x="210.70612"
+     height="314.36765"
+     width="97.861275"
      id="rect5845"
-     width="102.92502"
-     height="330.63428"
-     x="227.14644"
-     y="362.50806" />
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1" />
   <path
-     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.0517441px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 493.12807,409.08793 c 0.2996,12.52456 10.58507,-55.11794 107.17736,-55.06179 96.59225,0.0561 114.76785,80.18288 115.08829,142.98994 0.32045,62.80699 0.17413,196.04582 0.17413,196.04582 H 612.84152 c 0,0 -0.24638,-88.6189 0,-181.021 0.24638,-92.40205 -113.09328,-85.87399 -113.86951,-1.63039 -0.77623,84.24359 -1.71464,182.41959 -1.71464,182.41959 l -102.16636,0.082 0.0178,-329.91424 98.10814,-0.17979 z"
-     id="path5879" />
+     id="path5879"
+     d="m 463.6019,412.7186 c 0.28487,11.90838 10.06431,-52.40622 101.9044,-52.35283 91.84008,0.0533 109.12146,76.23801 109.42614,135.95506 0.30469,59.71699 0.16556,186.40069 0.16556,186.40069 l -97.67236,0 c 0,0 -0.23426,-84.259 0,-172.11506 0.23426,-87.85602 -107.52927,-81.64913 -108.26731,-1.55018 -0.73804,80.09894 -1.63029,173.44484 -1.63029,173.44484 l -97.13994,0.078 0.0169,-313.683 93.28137,-0.17095 z"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
 </svg>

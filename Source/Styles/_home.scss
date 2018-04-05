@@ -2,8 +2,7 @@ $cell-size: 333px;
 $cell-margin: 5px;
 
 .cells{
-	margin: 0 auto;
-	max-width: 4.5*$cell-size;
+
     display: flex;
     align-items: center;
     justify-content: center;
