@@ -72,7 +72,7 @@ app.get('/',function(req,res){
 		"home" : autoJson.getJson('Built/Data/home.json'),
 		"head" : {
 			"title" : "Home",
-			"desc" : "Homepage for zakwest.tech, see all the places you can find me on the web"
+			"desc" : "Homepage for Zak West see all the places you can find me on the web"
 		}
     };
 
@@ -88,7 +88,7 @@ app.get('/files',function(req,res){
 		"files" : autoJson.getJson('Built/Data/files.json'),
 		"head" : {
 			"title" : "Downloads",
-			"desc" : "Download files from zakwest.tech"
+			"desc" : "Download files from Zak West"
 		}
     };
 
@@ -135,7 +135,7 @@ app.get('/pages/:page',function(req,res,next){
 
 // Redirect to /blog to blog.zakwest.tech
 app.get('/blog', function(req,res){
-    return res.redirect(303, "https://blog.zakwest.tech");
+    return res.redirect(303, "https://blog.zakwest.co.uk");
 });
 
 // 404 page
