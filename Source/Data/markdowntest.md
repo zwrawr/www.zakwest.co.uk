@@ -12,12 +12,12 @@ Nullam egestas ullamcorper massa, sed euismod sapien semper laoreet. Etiam preti
 ## Images
 
 Inline-style:  
-![alt text](https://www.zakwest.tech/images/links_images/blog_screenshot_square.png "Logo Title Text 1")
+![alt text](https://www.zakwest.co.uk/images/links_images/blog_screenshot_square.png "Logo Title Text 1")
 
 Reference-style:  
 ![alt text][logo]
 
-[logo]: https://www.zakwest.tech/images/links_images/blog_screenshot_square.png "Logo Title Text 2"
+[logo]: https://www.zakwest.co.uk/images/links_images/blog_screenshot_square.png "Logo Title Text 2"
 
 ## Code
 This code's language is set to C

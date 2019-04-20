@@ -1,4 +1,4 @@
-[Blog_Link]: https://blog.zakwest.tech
+[Blog_Link]: https://blog.zakwest.co.uk
 [LD_Link]: http://ludumdare.com
 [Me_Img]: /img/Headshot.jpg
 [Files_Link]: /Files
