@@ -1,7 +1,7 @@
 # ww.zakwest.tech
 This is the source for my website [www.zakwest.tech](https://www.zakwest.tech). It's built using Node.js, Express.js, handlebars.js and sass.
 
-![Image of the zakwest.tech site](https://www.zakwest.tech/files/Github/www.zakwest.tech/www.zakwest.tech.png)
+![Image of the zakwest.tech site](https://zakwest.co.uk/files/Github/www.zakwest.tech/www.zakwest.tech.png)
 
 ## Building and Running
 ### Setup
