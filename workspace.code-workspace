@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/build": false,
+			"**/node_modules": true,
+			"package-lock.json": true
+		}
+	}
+}
