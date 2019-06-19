@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"author": "Zak West",
-	"name": "www.zakwest.tech",
+	"name": "zakwest.tech",
 	"description": "The source of the website residing at https://zakwest.tech",
 	"version": "2.0.0",
 	"repository": {
