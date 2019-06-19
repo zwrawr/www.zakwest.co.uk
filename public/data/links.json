@@ -1,5 +1,5 @@
 {
-	"cells" : [
+	"links" : [
 
 		{
 			"address" : "https://blog.zakwest.co.uk" ,
@@ -7,7 +7,7 @@
 			"rel" : "noopener",
 			"title" : "Blog",
 			"description" : "My Blog about electronics and computing",
-			"image" : "/img/content/Blog.svg",
+			"image" : "/public/img/linkboxes/Blog.svg",
 			"image_desc" : "Blog screenshot"
 		},
 
@@ -17,7 +17,7 @@
 			"rel" : "noopener",
 			"title" : "Twitter",
 			"description" : "Follow me on twitter",
-			"image" : "/img/content/Twitter.svg",
+			"image" : "/public/img/linkboxes/Twitter.svg",
 			"image_desc" : "Twitter logo"
 		},
 
@@ -27,7 +27,7 @@
 			"rel" : "noopener",
 			"title" : "GitHub",
 			"description" : "Veiw my projects",
-			"image" : "/img/content/GitHub.svg",
+			"image" : "/public/img/linkboxes/GitHub.svg",
 			"image_desc" : "github logo"
 		},
 
@@ -37,7 +37,7 @@
 			"rel" : "noopener",
 			"title" : "Youtube",
 			"description" : "Watch my channel",
-			"image" : "/img/content/YouTube.svg",
+			"image" : "/public/img/linkboxes/YouTube.svg",
 			"image_desc" : "youtube logo"
 		},
 
@@ -47,7 +47,7 @@
 			"rel" : "noopener",
 			"title" : "Ludum Dare",
 			"description" : "The trice yearly 48h game programming jam",
-			"image" : "/img/content/LudumDare.svg",
+			"image" : "/public/img/linkboxes/LudumDare.svg",
 			"image_desc" : "Ludum dare art"
 		},
 
@@ -57,7 +57,7 @@
 			"rel" : "noopener",
 			"title" : "Linkedin",
 			"description" : "Vist my linkedin",
-			"image" : "/img/content/LinkedIn.svg",
+			"image" : "/public/img/linkboxes/LinkedIn.svg",
 			"image_desc" : "linked in logo"
 		},
 
@@ -66,7 +66,7 @@
 			"target" : "_self",
 			"title" : "Files",
 			"description" : "Downloads",
-			"image" : "/img/content/Files.svg",
+			"image" : "/public/img/linkboxes/Files.svg",
 			"image_desc" : "folder logo"
 		},
 
@@ -76,7 +76,7 @@
 			"rel" : "noopener",
 			"title" : "LDStats",
 			"description" : "Ludum Dare statitics tracking",
-			"image" : "/img/content/LDStats.svg",
+			"image" : "/public/img/linkboxes/LDStats.svg",
 			"image_desc" : "ludum dare statistics"
 		},
 
@@ -86,7 +86,7 @@
 			"rel" : "noopener",
 			"title" : "sourcerer.io",
 			"description" : "A visual profile for SWEs ",
-			"image" : "/img/content/sourcerer.svg",
+			"image" : "/public/img/linkboxes/sourcerer.svg",
 			"image_desc" : "sourcerer io"
 		}
 	]
