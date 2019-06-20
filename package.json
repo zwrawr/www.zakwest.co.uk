@@ -18,14 +18,16 @@
 		"build": "preact build",
 		"dev": "ln -sf ../../public src/assets/ ; preact watch ; unlink src/assets/public",
 		"clean": "if test -e Built/public ; then unlink src/assets/public fi; rm -rf Built",
-		"lint": "eslint src; stylelint 'src/**/*.less'",
+		"lint": "eslint src tests; stylelint 'src/**/*.less'",
 		"test": "jest"
 	},
 	"devDependencies": {
-		"eslint": "^4.9.0",
+		"eslint": "^5.16.0",
 		"eslint-config-synacor": "^2.0.2",
+		"eslint-plugin-react": "^7.13.0",
 		"identity-obj-proxy": "^3.0.0",
 		"jest": "^24",
+		"jest-fetch-mock": "^2.1.2",
 		"less": "^3.9.0",
 		"less-loader": "^5.0.0",
 		"per-env": "^1.0.2",

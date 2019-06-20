@@ -20,8 +20,8 @@ describe('Initial Test of the File', () => {
 		expect(context.find('.file').exists()).toBeTruthy();
 
 		expect(context.find('.file').find('h4').text()).toBe(props.name);
-		expect(context.find('.file').find('p').first().text()).toBe(props.path);
-		expect(context.find('.file').find('p').last().text()).toBe('modtime : ' + props.modtime);
+		expect(context.find('.file').find('p').first().text()).toBe('/public/files/' + props.path);
+		expect(context.find('.file').find('p').last().text()).toBe('modtime : ' + props.modtime + ' type : ' + props.type);
 
 	});
 

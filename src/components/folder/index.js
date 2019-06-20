@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+
 import style from './style';
 
 
@@ -32,7 +33,7 @@ export default class Folder extends Component {
 		let alt = ((expanded)?'open':'closed') + 'folder icon';
 
 		return (
-			<div class={style.folder + ' ' + style.closed} >
+			<div class={style.folder + ' ' + ((expanded) ? style.opened : style.closed)} >
 				<img onClick={onclick} src={url} alt={alt} />
 				<h3 onClick={onclick}>{props.name}</h3>
 				{(expanded) ? props.children : null}

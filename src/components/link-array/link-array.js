@@ -24,7 +24,6 @@ export default class LinkArray extends Component {
 	}
 
 	render( props, state ) {
-
 		let linkboxes = [];
 
 		if (state.links !== undefined){
@@ -33,12 +32,15 @@ export default class LinkArray extends Component {
 			});
 		}
 
-		return (
+
+		let tmp = (
 			<div class={style.linkarray}>
 				<Spinner visible={state.links !== undefined} />
 				{linkboxes}
 			</div>
 		);
+
+		return tmp;
 	}
 
 }

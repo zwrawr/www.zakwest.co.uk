@@ -21,10 +21,10 @@ describe('Initial Test of the Header', () => {
 		expect(context.find('h5').text()).toBe('An Electronics and Computer Engineering student at the University of York.');
 	});
 
-	test('There is a lazy image', () => {
+	test('There is an image', () => {
 		const context = shallow(<Header />);
 
-		expect(context.find('LazyImg').exists()).toBeTruthy();
+		expect(context.find('img').exists()).toBeTruthy();
 
 	});
 });

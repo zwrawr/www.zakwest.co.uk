@@ -2,7 +2,7 @@ import { h, Component } from 'preact';
 import style from './style';
 import spinner from '../../assets/img/icons/spinner.svg';
 
-export default class LazyImg extends Component {
+export default class Spinner extends Component {
 
 	render( { visable } ){
 		if (visable===true) {
