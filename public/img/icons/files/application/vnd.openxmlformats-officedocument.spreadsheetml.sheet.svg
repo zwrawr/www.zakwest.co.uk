@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="550" height="550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path d="m92 0c-12 0-22 9.7-22 22v508c0 12 9.7 22 22 22h356c12 0 22-9.7 22-22v-396l-0.1-1.2c0-2.5-0.8-5-2.6-7l-106-121c-0.7-0.8-1.4-1.4-2.2-1.9-0.87-0.56-1.8-1-2.8-1.3l-0.6-0.2c-0.82-0.2-1.7-0.3-2.5-0.3zm0 22h250v111c0 6 4.8 11 11 11h95v224h-356v-0.2zm91 372h15l25 68 28-68h14v131l-14 1e-5 0.29-79-27 53-24-53-1.2 79-16-1e-5zm-8-0.14-16 66 16 65h-18l-20-53-21 53h-19l18-65-18-66h18l21 52 22-52zm263 0.18v27l-57-0.19-0.18 25 57-0.51-0.043 80-82 0.68-3e-5 -26h64l-0.3-33-63-0.22v-72h83z" fill="#000006"/>
+ <path d="m274 394h22v105h53v26l-75-2e-5z" fill="#fff"/>
+ <g stroke="#000" stroke-width="14">
+  <rect x="115" y="54" width="157" height="63" fill="none"/>
+  <rect x="115" y="117" width="157" height="63" fill="none"/>
+  <rect x="115" y="180" width="157" height="63"/>
+ </g>
+ <g fill="none" stroke="#000" stroke-width="14">
+  <rect x="272" y="180" width="157" height="63"/>
+  <rect x="272" y="243" width="157" height="63"/>
+  <rect x="115" y="243" width="157" height="63"/>
+ </g>
+</svg>

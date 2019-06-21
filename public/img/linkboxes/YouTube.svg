@@ -1,0 +1,7 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="1e3" width="1e3" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 1000 1000">
+<g>
+<rect height="1e3" width="1e3" y="-.0000384" x="0" fill="#e52d27"/>
+<path d="m499 300c282 0.0226 275 0.86 276 199 0.224 198 5.68 201-276 201-281 0.0816-274 2.17-274-196-0.126-198-7.37-204 274-204z" fill-rule="evenodd" fill="#fff"/>
+<path d="m440 425v150l150-76z" fill-rule="evenodd" fill="#e52d27"/>
+</g>
+</svg>
