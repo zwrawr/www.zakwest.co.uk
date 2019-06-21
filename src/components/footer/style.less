@@ -1,0 +1,44 @@
+@import '../../style/vars';
+
+.footer {
+	width: 100%;
+	background-color: @button-color-normal;
+
+	margin-top: 1%;
+	padding: 1%;
+
+	position: relative;
+
+	.left,
+	.right {
+		background-color: @button-color-normal;
+		margin: 0;
+		position: relative;
+
+		img,
+		a img {
+			display: inline-block;
+			width: 100px;
+			height: auto;
+		}
+
+		a {
+			display: inline-block;
+
+			.small {
+				display: block;
+				width: 40px;
+				margin: 5px;
+				height: auto;
+			}
+		}
+	}
+
+	.left {
+		float: left;
+	}
+
+	.right {
+		float: right;
+	}
+}

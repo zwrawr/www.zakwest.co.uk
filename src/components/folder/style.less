@@ -1,0 +1,27 @@
+@import '../../style/vars';
+
+.folder {
+	margin-left: 4%;
+	display: block;
+
+	&.opened {
+		border-left: 2px solid black;
+	}
+
+	img {
+		display: inline-block;
+
+		width: auto;
+		height: 1.2*(@default-h4-size+2*@default-p-size);
+
+		padding: 0 1%;
+		vertical-align: middle;
+	}
+
+	h3 {
+		display: inline-block;
+
+		height: 1.2*(@default-h4-size+2*@default-p-size);
+		padding: 0 1%;
+	}
+}

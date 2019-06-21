@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title><%= htmlWebpackPlugin.options.title %></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<meta name="description" content="hello">
+
+		<!-- Twiiter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@zwrawr">
+		<meta name="twitter:creator" content="@zwrawr">
+		<meta name="twitter:title" content="Zak West's Website">
+		<meta name="twitter:description" content="An Electronic and Computer Engineering student at the University of York">
+		<meta name="twitter:image" content="https://zakwest.co.uk/img/content/Blog.svg">
+
+		<!-- Google -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"publisher": {
+					"@type": "Organization",
+					"name": "Zak West",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://zakwest.co.uk/img/content/Blog.svg",
+						"width": 1000,
+						"height": 1000
+					}
+				},
+				"url": "https://zakwest.co.uk/",
+				"image": {
+					"@type": "ImageObject",
+					"url": "https://zakwest.co.uk//img/content/Blog.svg",
+					"width": 1000,
+					"height": 1000
+				},
+				"mainEntityOfPage": {
+					"@type": "WebPage",
+					"@id": "https://zakwest.co.uk/"
+				},
+				"description": "An Electronics and Computer Engineering student at the University of York."
+			}
+		</script>
+
+		<!-- OG -->
+		<meta property="og:site_name" content="Zak West" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Zak West" />
+		<meta property="og:description" content="An Electronics and Computer Engineering student at the University of York." />
+		<meta property="og:url" content="https://zakwest.co.uk/" />
+		<meta property="og:image" content="https://zakwest.co.uk/img/content/Blog.svg" />
+		<meta property="og:image:width" content="1000" />
+		<meta property="og:image:height" content="1000" />
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+		<link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>manifest.json">
+		<% if (htmlWebpackPlugin.options.manifest.theme_color) { %>
+			<meta name="theme-color" content="<%= htmlWebpackPlugin.options.manifest.theme_color %>">
+		<% } %>
+		<% const loadManifest = htmlWebpackPlugin.options.createLoadManifest(compilation.assets, webpack.namedChunkGroups);%>
+		<% const filesRegexp = htmlWebpackPlugin.options.inlineCss ? /\.(chunk\.\w{5}\.css|js)$/ : /\.(css|js)$/;%>
+		<% for (const file in loadManifest[htmlWebpackPlugin.options.url]) { %>
+			<% if (htmlWebpackPlugin.options.preload && file && file.match(filesRegexp)) { %>
+				<% /* crossorigin for main bundle as that is loaded from `<script type=module` tag, other lazy loaded bundles are from webpack so its not needed */ %>
+				<link rel="preload" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>" <%= file.match(/bundle\.\w{5}\.esm\.js$/)?'crossorigin="anonymous"':'' %>>
+			<% } %>
+		<% } %>
+	</head>
+	<body>
+		<%= htmlWebpackPlugin.options.ssr() %>
+		<% if (webpack.assets.filter(entry => entry.name.match(/bundle(\.\w{5})?.esm.js$/)).length > 0) { %>
+			<% /* Fix for safari < 11 nomodule bug. TODO: Do the following only for safari. */ %>
+			<script>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+			<script crossorigin="anonymous" src="<%= htmlWebpackPlugin.files.publicPath %><%= webpack.assets.filter(entry => entry.name.match(/bundle(\.\w{5})?.esm.js$/))[0].name %>" type="module"></script>
+			<%
+				/*Fetch and Promise polyfills are not needed for browsers that support type=module
+				Please re-evaluate below line if adding more polyfills.*/
+			%>
+			<script nomodule>window.fetch||document.write('<script src="<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
+			<script nomodule defer src="<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
+		<% } else { %>
+			<script <%= htmlWebpackPlugin.options.scriptLoading %>  src="<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
+			<script>window.fetch||document.write('<script src="<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
+		<% } %>
+		<noscript>
+			<svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="m25 5c-11 0-20 9-20 20h4.4c0-8.6 7-16 16-16z" fill="#888" stroke-width="1.1"><animateTransform attributeName="transform" attributeType="xml" dur="1s" from="0 25 25" repeatCount="indefinite" to="360 25 25" type="rotate"/></path></svg>
+			This website requires JavaScript
+		</noscript>
+	</body>
+</html>

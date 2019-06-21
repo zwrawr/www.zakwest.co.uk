@@ -1,0 +1,57 @@
+@import '../../style/vars';
+
+.linkbox {
+	width: @cell-size;
+	height: @cell-size;
+
+	margin: @cell-margin;
+
+	text-align: center;
+
+	overflow: hidden;
+
+	a {
+		&:hover {
+			.links_image {
+				transform: scale(1.1);
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+
+			transition: transform 0.2s ease;
+		}
+
+		h2 {
+			position: relative;
+			top: -0.975*@cell-size;
+			right: 0;
+			bottom: auto;
+			left: 0;
+
+			color: @header-text-color;
+			font-size: @default-h2-size;
+
+			width: 75%;
+			margin: auto;
+
+			background: rgba(#000, 0.75);
+		}
+
+		p {
+			position: relative;
+			top: auto;
+			right: 0;
+			bottom: 0.35*@cell-size;
+			left: 0;
+
+			color: @header-text-color;
+			font-size: @default-p-size;
+
+			width: 80%;
+			margin: auto;
+		}
+	}
+}

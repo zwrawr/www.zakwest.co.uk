@@ -1,0 +1,17 @@
+{
+	"env": {
+		"jest": true,
+		"es6": true
+	},
+	"plugins": [
+		"react"
+	],
+	"globals": {
+        "window": "writable",
+        "fetch": "readonly"
+    },
+	"rules": {
+		"no-unused-vars": [2, { "args": "none", "varsIgnorePattern": "^(h|_.*)$" }],
+		"react/jsx-uses-vars": 1
+	}
+}
