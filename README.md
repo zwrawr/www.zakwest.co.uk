@@ -1,9 +1,9 @@
 # ww.zakwest.tech
-This is the source for my website [www.zakwest.tech](https://www.zakwest.tech). It's built using Node.js, Express.js, handlebars.js and sass.
+This is the source for my website [www.zakwest.co.uk](https://www.zakwest.co.uk). It's built using Node.js on the server side and preact on the client side. jest and preact-render-spy are used for testing whilt eslint and stylelint are the linters.
 
-![Image of the zakwest.tech site](https://zakwest.co.uk/files/Github/www.zakwest.tech/www.zakwest.tech.png)
+![Image of the zakwest.co.uk site](https://zakwest.co.uk/files/Github/www.zakwest.tech/www.zakwest.tech.png)
 
-## CLI Commands
+## Development CLI Commands
 
 ``` bash
 # install dependencies
@@ -15,17 +15,15 @@ npm run dev
 # build for production with minification
 npm run build
 
-# test the production build locally
-npm run serve
-
-# run tests with jest and preact-render-spy 
+# run tests with jest and preact-render-spy
 npm run test
+
+# run eslint and stylelint
+npm run lint
 ```
 
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
 
-
-## Building and Running
+## Building and Running the pseudo Production enviroment
 ### Setup
 Head over to the [dev.zakwest.tech](https://github.com/zwrawr/dev.zakwest.tech) repo to find out how to use vagrant to host this project.
 The provisioning script deals with all the installation and setup and make the site avaliable at www.dev.zakwest.tech .
