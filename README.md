@@ -1,4 +1,7 @@
 # ww.zakwest.tech
+[![Build Status](https://travis-ci.org/zwrawr/www.zakwest.tech.svg?branch=develop)](https://travis-ci.org/zwrawr/www.zakwest.tech)
+
+
 This is the source for my website [www.zakwest.co.uk](https://www.zakwest.co.uk). It's built using Node.js on the server side and preact on the client side. jest and preact-render-spy are used for testing whilt eslint and stylelint are the linters.
 
 ![Image of the zakwest.co.uk site](https://zakwest.co.uk/files/Github/www.zakwest.tech/www.zakwest.tech.png)
