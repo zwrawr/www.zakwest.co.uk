@@ -1,5 +1,7 @@
 # Ignore everything in this directory
-*
+**.*
+# Except some plain text files
+!**.svg
 # Except this file
 !.gitignore
 
