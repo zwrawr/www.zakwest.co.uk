@@ -54,7 +54,7 @@ export default class FileBrowser extends Component {
 			.then(res => res.json())
 			.then((out) => {
 				let t = [];
-				// Findout whats changing this, so we don't need to clone it
+
 				this.parseFolder(out,t);
 
 				this.setState({ tree: t });
@@ -70,7 +70,6 @@ export default class FileBrowser extends Component {
 			this.getFiles(filesUrl);
 		}
 
-
 	}
 
 
@@ -78,9 +77,9 @@ export default class FileBrowser extends Component {
 
 		return (
 			<div class={style.filebrowser + ' ' + style.page}>
-				<h1>FileBrowser</h1>
+				<h2>FileBrowser</h2>
 				<hr />
-				<Spinner visible={state.tree !== undefined} />
+				<Spinner visible={state.tree === undefined} />
 
 				{(state.tree === undefined) ? null : state.tree}
 			</div>

@@ -22,9 +22,11 @@ export default class LazyImg extends Component {
 	}
 
 	loading(event){
-		if (event.target.complete) this.setState({
-			loaded: true
-		});
+		if (event.target.complete) {
+			this.setState({
+				loaded: true
+			});
+		}
 	}
 
 	componentWillMount(){

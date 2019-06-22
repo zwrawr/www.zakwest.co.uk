@@ -17,4 +17,14 @@ describe('Initial Test of the Spinner', () => {
 
 		expect(context.output()).toBeFalsy();
 	});
+
+	test('visible Spinner correctly updates on props change', () => {
+		const context = shallow(<Spinner visable />);
+
+		expect(context.find('img').exists()).toBeTruthy();
+
+		context.render(<Spinner />);
+		expect(context.find('img').exists()).toBeFalsy();
+
+	});
 });

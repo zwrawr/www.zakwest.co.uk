@@ -1,3 +1,5 @@
+import { h } from 'preact';
+
 import style from './style';
 
 import LazyImage from '../../components/lazyimg';
@@ -20,8 +22,8 @@ const contacttext = [
 
 const About = () => (
 	<div class={style.page}>
-		<div class={style.about + ' ' + style.cf}>
-			<h1>About<hr /></h1>
+		<div id="About" class={style.about + ' ' + style.cf}>
+			<h2>About<hr /></h2>
 			<div class={style.left + ' ' + style.small}>
 				<LazyImage src={headshot} alt="Zak West's Headshot" />
 			</div>
@@ -29,8 +31,8 @@ const About = () => (
 				{abouttext}
 			</div>
 		</div>
-		<div class={style.about + ' ' + style.cf}>
-			<h1>Contact<hr /></h1>
+		<div id="Contact" class={style.about + ' ' + style.cf}>
+			<h2>Contact<hr /></h2>
 			<div class={style.right + ' ' + style.small}>
 				<img src={zw} alt="Zak West's Z.W. logo" />
 			</div>

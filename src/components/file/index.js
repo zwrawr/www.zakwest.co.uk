@@ -8,6 +8,7 @@ const iconSuffix = '.svg';
 
 function loadFailed(err) {
 	console.warn('failed to load icon defaulting back to file icon');
+
 	err.target.src = iconBase + 'file' + iconSuffix;
 	//this.setState({ failed: true });
 
@@ -22,7 +23,6 @@ const File = ( { name, path, type, modtime }, state ) => (
 				<p>{filesBaseRoute + path}</p>
 				<p>modtime : {modtime}	type : {type}</p>
 			</div>
-
 		</a>
 	</div>
 );
