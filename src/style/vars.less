@@ -21,14 +21,16 @@
 @serif-fontstack: 'Merriweather', serif;
 @mono-fontstack: 'Source Code Pro', monospace;
 
-// default font sizes
-@default-h1-size: 26pt;
-@default-h2-size: 22pt;
-@default-h3-size: 18pt;
-@default-h4-size: 16pt;
-@default-h5-size: 14pt;
+@font-size-multiplier: 1.2;
 
-@default-p-size : 12pt;
+// default font sizes
+@default-h1-size: @default-h2-size * @font-size-multiplier;
+@default-h2-size: @default-h3-size * @font-size-multiplier;
+@default-h3-size: @default-h4-size * @font-size-multiplier;
+@default-h4-size: @default-h5-size * @font-size-multiplier;
+@default-h5-size: @default-p-size * @font-size-multiplier;
+
+@default-p-size : 1.1em;
 
 // cells
 @cell-size: 333px;

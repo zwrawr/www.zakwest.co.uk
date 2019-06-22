@@ -27,6 +27,7 @@ describe('Initial Test of the LazyImg', () => {
 		expect(context.find('.imagecontainer').exists()).toBeTruthy();
 
 		expect(context.find('img').exists()).toBeTruthy();
+		expect(context.find('img').attr('src')).toBe(context.state('src'));
 	});
 
 

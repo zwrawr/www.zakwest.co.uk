@@ -17,7 +17,7 @@
 		"start": "node index.js",
 		"build": "preact build",
 		"dev": "ln -sf ../../public src/assets/ ; preact watch ; unlink src/assets/public",
-		"clean": "if test -e Built/public ; then unlink src/assets/public fi; rm -rf Built",
+		"clean": "if test -e build/assets/public ; then unlink src/assets/public fi; if test -e build ; then rm -rf build fi; if test -e coverage ; then rm -rf coverage fi; ",
 		"lint": "eslint src tests; stylelint 'src/**/*.less'",
 		"test": "jest"
 	},
@@ -76,6 +76,17 @@
 			"^react-dom$": "preact-compat",
 			"^create-react-class$": "preact-compat/lib/create-react-class",
 			"^react-addons-css-transition-group$": "preact-css-transition-group"
-		}
+		},
+		"errorOnDeprecated": true,
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx}",
+			"!**/node_modules/**",
+			"!**/vendor/**"
+		],
+		"coverageReporters": [
+			"text",
+			"json-summary"
+		]
 	}
 }

@@ -4,5 +4,6 @@ package-lock.*
 
 build/
 tmp/
+coverage/
 
 /*.log

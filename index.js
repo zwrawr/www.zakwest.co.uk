@@ -46,6 +46,11 @@ app.get('/blog', (req,res) => (
 	 res.redirect(303, 'https://blog.zakwest.co.uk')
 ));
 
+// Redirect to /page/about and /page/contact to /about
+app.get(/^\/page\/(about|contact)\/?/, (req,res) => (
+	res.redirect(303, '/about')
+));
+
 // every other route will go to the single page preact app
 app.get(['/about','/files'], (req, res) => {
 	console.info('serving static PWA');
