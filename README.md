@@ -1,7 +1,7 @@
 # ww.zakwest.tech
 [![Build Status](https://travis-ci.org/zwrawr/www.zakwest.co.uk.svg?branch=develop)](https://travis-ci.org/zwrawr/www.zakwest.co.uk)
 [![Coverage Status](https://coveralls.io/repos/github/zwrawr/www.zakwest.co.uk/badge.svg?branch=develop)](https://coveralls.io/github/zwrawr/www.zakwest.co.uk?branch=develop)
-
+[![License: CC BY 3.0](https://img.shields.io/badge/License-CC%20BY%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by/3.0/)
 
 This is the source for my website [www.zakwest.co.uk](https://www.zakwest.co.uk). It's built using Node.js on the server side and preact on the client side. jest and enzyme are used for testing whilst eslint and stylelint are the linters.
 
