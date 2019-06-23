@@ -3,7 +3,7 @@ import { h } from 'preact';
 
 
 // See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
 
 describe('Initial Test of the Spinner', () => {
 	test('visible Spinner contains an image', () => {
@@ -15,7 +15,7 @@ describe('Initial Test of the Spinner', () => {
 	test('invisible Spinner contains nothing', () => {
 		const context = shallow(<Spinner />);
 
-		expect(context.output()).toBeFalsy();
+		expect(context.exists()).toBeFalsy();
 	});
 
 	test('visible Spinner correctly updates on props change', () => {
@@ -23,7 +23,8 @@ describe('Initial Test of the Spinner', () => {
 
 		expect(context.find('img').exists()).toBeTruthy();
 
-		context.render(<Spinner />);
+		context.setProps({visable: undefined});
+
 		expect(context.find('img').exists()).toBeFalsy();
 
 	});

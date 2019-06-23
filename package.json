@@ -55,12 +55,14 @@
 	"jest": {
 		"verbose": true,
 		"setupFiles": [
-			"<rootDir>/tests/__mocks__/browserMocks.js"
+			"<rootDir>/tests/__mocks__/browserMocks.js",
+			"<rootDir>/tests/__setup__/enzymeSetup.js"
 		],
 		"testRegex": "(/(__tests__|tests)/.*|(\\.|/)(test|spec))\\.jsx?$",
 		"testPathIgnorePatterns": [
 			"/node_modules/",
-			"<rootDir>/tests/__mocks__/*"
+			"<rootDir>/tests/__mocks__/*",
+			"<rootDir>/tests/__setup__/*"
 		],
 		"testURL": "http://localhost:8080",
 		"moduleFileExtensions": [

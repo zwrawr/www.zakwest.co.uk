@@ -2,7 +2,7 @@ import LazyImg from '../../src/components/lazyimg';
 import { h } from 'preact';
 
 // See: https://github.com/mzgoddard/preact-render-spy
-import { shallow, deep } from 'preact-render-spy';
+import { shallow, mount } from 'enzyme';
 
 const props = {
 	src: 'file.xyz',
@@ -13,7 +13,7 @@ describe('Initial Test of the LazyImg', () => {
 
 	test('LazyImg has spinner', () => {
 
-		const context = deep(<LazyImg {...props} />);
+		const context = mount(<LazyImg {...props} />);
 
 		expect(context.find('.imagecontainer').exists()).toBeTruthy();
 
@@ -27,7 +27,7 @@ describe('Initial Test of the LazyImg', () => {
 		expect(context.find('.imagecontainer').exists()).toBeTruthy();
 
 		expect(context.find('img').exists()).toBeTruthy();
-		expect(context.find('img').attr('src')).toBe(context.state('src'));
+		expect(context.find('img').prop('src')).toBe(context.state('src'));
 	});
 
 

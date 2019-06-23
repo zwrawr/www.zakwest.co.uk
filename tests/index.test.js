@@ -2,7 +2,7 @@ import App from '../src/index.js';
 import { h } from 'preact';
 
 // See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
 
 describe('Test of the Index route', () => {
 

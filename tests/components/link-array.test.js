@@ -4,7 +4,7 @@ import { h } from 'preact';
 
 
 // See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
 
 const linksjson ={
 	links : [

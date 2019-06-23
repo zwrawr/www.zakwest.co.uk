@@ -1,8 +1,7 @@
 import FileBrowser from '../../src/routes/filebrowser';
 import { h } from 'preact';
 
-// See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
 
 const props = {
 	path: '/files/'
@@ -73,7 +72,7 @@ describe('Test of the FileBrowser route', () => {
 
 		expect(context.find('.filebrowser').find('Spinner').exists()).toBeTruthy();
 
-		expect(context.find('.filebrowser').find('Spinner').at(0).attr('visible')).toBeTruthy();
+		expect(context.find('.filebrowser').find('Spinner').at(0).prop('visible')).toBeTruthy();
 
 	});
 
@@ -86,11 +85,11 @@ describe('Test of the FileBrowser route', () => {
 
 		expect(context.find('.filebrowser').exists()).toBeTruthy();
 
-		expect(context.find('.filebrowser').find('Spinner').at(0).attr('visible')).toBeTruthy();
+		expect(context.find('.filebrowser').find('Spinner').at(0).prop('visible')).toBeTruthy();
 
 		// wait 110ms before checking the status of the spinner
 		setTimeout(() => {
-			expect(context.find('.filebrowser').find('Spinner').at(0).attr('visible')).toBeFalsy();
+			expect(context.find('.filebrowser').find('Spinner').at(0).prop('visible')).toBeFalsy();
 			done();
 		}, delay * 1.1);
 
@@ -109,12 +108,11 @@ describe('Test of the FileBrowser route', () => {
 			expect(context.find('.filebrowser').find('Folder').exists()).toBeTruthy();
 
 			expect(context.find('.filebrowser').find('Folder').length).toBe(2);
-			expect(context.find('.filebrowser').find('Folder').at(0).attr('name')).toBe(filesjson.name);
-			expect(context.find('.filebrowser').find('Folder').at(1).attr('name')).toBe(filesjson.children[1].name);
+			expect(context.find('.filebrowser').find('Folder').at(0).prop('name')).toBe(filesjson.name);
+			expect(context.find('.filebrowser').find('Folder').at(1).prop('name')).toBe(filesjson.children[1].name);
 
-			expect(context.find('.filebrowser').find('File').length).toBe(2);
-			expect(context.find('.filebrowser').find('File').at(0).attr('name')).toBe(filesjson.children[0].name);
-			expect(context.find('.filebrowser').find('File').at(1).attr('name')).toBe(filesjson.children[1].children[0].name);
+			expect(context.find('.filebrowser').find('File').length).toBe(1);
+			expect(context.find('.filebrowser').find('File').at(0).prop('name')).toBe(filesjson.children[0].name);
 
 			done();
 		}, delay * 1.1);

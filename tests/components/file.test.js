@@ -1,13 +1,7 @@
 import File from '../../src/components/file';
 import { h } from 'preact';
 
-// See: https://github.com/mzgoddard/preact-render-spy
-//import { shallow } from 'preact-render-spy';
-
-import { configure, shallow, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-preact-pure';
-
-configure({ adapter: new Adapter() });
+import { shallow } from 'enzyme';
 
 const props = {
 	name: 'file_xyz',
@@ -48,9 +42,9 @@ describe('Initial Test of the File', () => {
 
 	});
 
-	test('File deals with unknown type', (done) => {
+	test('File deals with unknown type', () => {
 
-		const context = mount(<File {...props} />);
+		const context = shallow(<File {...props} />);
 
 		expect(context.find('.file').exists()).toBeTruthy();
 		expect(context.find('.file').find('img').length).toBe(1);
