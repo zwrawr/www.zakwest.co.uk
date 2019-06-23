@@ -8,13 +8,15 @@ const iconSuffix = '.svg';
 
 function loadFailed(err) {
 	console.warn('failed to load icon defaulting back to file icon');
-
+	console.warn(err.target.src);
 	err.target.src = iconBase + 'file' + iconSuffix;
-	//this.setState({ failed: true });
+	console.warn(err.target.src);
 
 }
 
-const File = ( { name, path, type, modtime }, state ) => (
+const File = ( { name, path, type, modtime } ) => {
+	console.log("Rendering file");
+	return (
 	<div class={style.file}>
 		<a href={filesBaseRoute + path} target="_blank" rel="noopener noreferrer">
 			<img src={iconBase + type + iconSuffix} onerror={loadFailed} />
@@ -25,6 +27,7 @@ const File = ( { name, path, type, modtime }, state ) => (
 			</div>
 		</a>
 	</div>
-);
+	);
+};
 
 export default File;
