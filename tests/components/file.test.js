@@ -54,7 +54,7 @@ describe('Initial Test of the File', () => {
 		let param = { target: { src: null } };
 		context.find('.file').find('img').simulate('error', param );
 
-		expect(param.target.src).toBe('/public/img/icons/files/file.svg');
+		expect(context.find('.file').find('img').attr('src')).toBe('/public/img/icons/files/file.svg');
 
 
 	});
