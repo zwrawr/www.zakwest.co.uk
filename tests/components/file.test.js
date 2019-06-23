@@ -57,8 +57,8 @@ describe('Initial Test of the File', () => {
 		expect(context.find('.file').find('img').prop('src')).toBe('/public/img/icons/files/' + props.type + '.svg');
 
 
-		//context.find('.file').find('img').at(0).simulate('error');
-		context.find('.file').find('img').at(0).getElement().;
+		context.find('.file').find('img').at(0).simulate('error');
+		//context.find('.file').find('img').at(0).getElement().;
 
 		context.update();
 		expect(context.find('.file').find('img').prop('src')).toBe('/public/img/icons/files/file.svg');
