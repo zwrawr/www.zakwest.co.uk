@@ -1,7 +1,5 @@
 import Header from '../../src/components/header';
 import { h } from 'preact';
-import { Link } from 'preact-router/match';
-
 
 // See: https://github.com/mzgoddard/preact-render-spy
 import { shallow } from 'enzyme';

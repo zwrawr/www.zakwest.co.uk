@@ -23,7 +23,7 @@ describe('Initial Test of the Spinner', () => {
 
 		expect(context.find('img').exists()).toBeTruthy();
 
-		context.setProps({visable: undefined});
+		context.setProps({ visable: undefined });
 
 		expect(context.find('img').exists()).toBeFalsy();
 
