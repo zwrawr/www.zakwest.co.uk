@@ -3,7 +3,7 @@ import { h } from 'preact';
 
 
 // See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
 
 const props = {
 	address: 'https://blog.zakwest.co.uk' ,
@@ -21,9 +21,9 @@ describe('Initial Test of the LinkBox', () => {
 		const context = shallow(<LinkBox {...props} />);
 
 		expect(context.find('a').exists()).toBeTruthy();
-		expect(context.find('a').attr('href')).toBe(props.address);
-		expect(context.find('a').attr('target')).toBe(props.target);
-		expect(context.find('a').attr('rel')).toBe(props.rel);
+		expect(context.find('a').prop('href')).toBe(props.address);
+		expect(context.find('a').prop('target')).toBe(props.target);
+		expect(context.find('a').prop('rel')).toBe(props.rel);
 
 	});
 
@@ -32,8 +32,8 @@ describe('Initial Test of the LinkBox', () => {
 		const context = shallow(<LinkBox {...props} />);
 
 		expect(context.find('img').exists()).toBeTruthy();
-		expect(context.find('img').attr('src')).toBe(props.image);
-		expect(context.find('img').attr('alt')).toBe(props.image_desc);
+		expect(context.find('img').prop('src')).toBe(props.image);
+		expect(context.find('img').prop('alt')).toBe(props.image_desc);
 
 	});
 

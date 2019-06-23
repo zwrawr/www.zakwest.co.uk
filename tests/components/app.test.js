@@ -2,7 +2,7 @@ import App from '../../src/components/app.js';
 import { h } from 'preact';
 
 // See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
 
 describe('Test of the Index route', () => {
 
@@ -36,7 +36,7 @@ describe('Test of the Index route', () => {
 		expect(context.find('#app').exists()).toBeTruthy();
 
 		expect(context.find('#app').childAt(1).find('About').exists()).toBeTruthy();
-		expect(context.find('#app').childAt(1).find('About').attr('path')).toBe('/about/');
+		expect(context.find('#app').childAt(1).find('About').prop('path')).toBe('/about/');
 
 	});
 
@@ -46,7 +46,7 @@ describe('Test of the Index route', () => {
 		expect(context.find('#app').exists()).toBeTruthy();
 
 		expect(context.find('#app').childAt(1).find('Home').exists()).toBeTruthy();
-		expect(context.find('#app').childAt(1).find('Home').attr('path')).toBe('/');
+		expect(context.find('#app').childAt(1).find('Home').prop('path')).toBe('/');
 
 	});
 
@@ -56,7 +56,7 @@ describe('Test of the Index route', () => {
 		expect(context.find('#app').exists()).toBeTruthy();
 
 		expect(context.find('#app').childAt(1).find('FileBrowser').exists()).toBeTruthy();
-		expect(context.find('#app').childAt(1).find('FileBrowser').attr('path')).toBe('/files/');
+		expect(context.find('#app').childAt(1).find('FileBrowser').prop('path')).toBe('/files/');
 
 	});
 

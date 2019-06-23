@@ -1,8 +1,7 @@
 import File from '../../src/components/file';
 import { h } from 'preact';
 
-// See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
 
 const props = {
 	name: 'file_xyz',
@@ -39,7 +38,7 @@ describe('Initial Test of the File', () => {
 
 		expect(context.find('.file').exists()).toBeTruthy();
 		expect(context.find('.file').find('img').length).toBe(1);
-		expect(context.find('.file').find('img').attr('src')).toBe('/public/img/icons/files/' + props.type + '.svg');
+		expect(context.find('.file').find('img').prop('src')).toBe('/public/img/icons/files/' + props.type + '.svg');
 
 	});
 
@@ -49,13 +48,14 @@ describe('Initial Test of the File', () => {
 
 		expect(context.find('.file').exists()).toBeTruthy();
 		expect(context.find('.file').find('img').length).toBe(1);
-		expect(context.find('.file').find('img').attr('src')).toBe('/public/img/icons/files/' + props.type + '.svg');
+		expect(context.find('.file').find('img').prop('src')).toBe('/public/img/icons/files/' + props.type + '.svg');
 
-		let param = { target: { src: null } };
-		context.find('.file').find('img').simulate('error', param );
 
-		expect(context.find('.file').find('img').attr('src')).toBe('/public/img/icons/files/file.svg');
+		context.find('.file').find('img').at(0).simulate('error');
+		//context.find('.file').find('img').at(0).getElement().;
 
+		context.update();
+		expect(context.find('.file').find('img').prop('src')).toBe('/public/img/icons/files/file.svg');
 
 	});
 

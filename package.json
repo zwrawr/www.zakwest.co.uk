@@ -17,12 +17,14 @@
 		"start": "node index.js",
 		"build": "preact build",
 		"dev": "ln -sf ../../public src/assets/ ; preact watch ; unlink src/assets/public",
-		"clean": "if test -e build/assets/public ; then unlink src/assets/public fi; if test -e build ; then rm -rf build fi; if test -e coverage ; then rm -rf coverage fi; ",
+		"clean": "if [ -e src/assets/public ]; then unlink src/assets/public & echo '[UNLN] unlinked src/assets/public'; fi; if [ -e build ]; then rm -rf build & echo '[ RM ] removed build'; fi; if [ -e coverage ]; then rm -rf coverage & echo '[ RM ] removed coverage'; fi; echo '[DONE]Finished Clean' ",
 		"lint": "eslint src tests; stylelint 'src/**/*.less'",
 		"test": "jest"
 	},
 	"devDependencies": {
 		"coveralls": "^3.0.4",
+		"enzyme": "^3.10.0",
+		"enzyme-adapter-preact-pure": "^2.0.0",
 		"eslint": "^5.16.0",
 		"eslint-config-synacor": "^2.0.2",
 		"eslint-plugin-react": "^7.13.0",
@@ -33,17 +35,14 @@
 		"less-loader": "^5.0.0",
 		"per-env": "^1.0.2",
 		"preact-cli": "3.0.0-rc.1",
-		"preact-render-spy": "^1.3.0",
+		"preact-render-to-string": "^4.1.0",
 		"stylelint": "^10.1.0",
 		"stylelint-config-standard": "^18"
 	},
 	"dependencies": {
 		"acorn": "^6.1.1",
 		"preact": "^8.2.6",
-		"preact-compat": "^3.19.0",
 		"preact-router": "^2.5.7",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
 		"uglify-js": "^3.6.0"
 	},
 	"eslintIgnore": [
@@ -53,12 +52,14 @@
 	"jest": {
 		"verbose": true,
 		"setupFiles": [
-			"<rootDir>/tests/__mocks__/browserMocks.js"
+			"<rootDir>/tests/__mocks__/browserMocks.js",
+			"<rootDir>/tests/__setup__/enzymeSetup.js"
 		],
 		"testRegex": "(/(__tests__|tests)/.*|(\\.|/)(test|spec))\\.jsx?$",
 		"testPathIgnorePatterns": [
 			"/node_modules/",
-			"<rootDir>/tests/__mocks__/*"
+			"<rootDir>/tests/__mocks__/*",
+			"<rootDir>/tests/__setup__/*"
 		],
 		"testURL": "http://localhost:8080",
 		"moduleFileExtensions": [
@@ -72,11 +73,7 @@
 			"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/__mocks__/fileMocks.js",
 			"\\.(css|less|scss)$": "identity-obj-proxy",
 			"^./style$": "identity-obj-proxy",
-			"^preact$": "<rootDir>/node_modules/preact/dist/preact.min.js",
-			"^react$": "preact-compat",
-			"^react-dom$": "preact-compat",
-			"^create-react-class$": "preact-compat/lib/create-react-class",
-			"^react-addons-css-transition-group$": "preact-css-transition-group"
+			"^preact$": "<rootDir>/node_modules/preact/dist/preact.min.js"
 		},
 		"errorOnDeprecated": true,
 		"collectCoverage": true,

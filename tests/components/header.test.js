@@ -1,17 +1,15 @@
 import Header from '../../src/components/header';
 import { h } from 'preact';
-import { Link } from 'preact-router/match';
-
 
 // See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
 
 describe('Initial Test of the Header', () => {
 	test('Header renders 4 nav items', () => {
 		const context = shallow(<Header />);
 
 		expect(context.find('nav').exists()).toBeTruthy();
-		expect(context.find(<Link />).length).toBe(4);
+		expect(context.find('Link').length).toBe(4);
 	});
 
 	test('Header text is Zak West', () => {

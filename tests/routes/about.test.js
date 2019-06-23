@@ -2,7 +2,7 @@ import About from '../../src/routes/about';
 import { h } from 'preact';
 
 // See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
 
 const props = {
 	path: '/about/'
@@ -29,7 +29,7 @@ describe('Test of the About route', () => {
 		const context = shallow(<About {...props} />);
 
 		expect(context.find('.page').find('.about').at(0).find('h2').text()).toBe('About');
-		expect(context.find('.page').find('.about').at(0).attr('id')).toBe('About');
+		expect(context.find('.page').find('.about').at(0).prop('id')).toBe('About');
 
 	});
 
@@ -37,7 +37,7 @@ describe('Test of the About route', () => {
 		const context = shallow(<About {...props} />);
 
 		expect(context.find('.page').find('.about').at(1).find('h2').text()).toBe('Contact');
-		expect(context.find('.page').find('.about').at(1).attr('id')).toBe('Contact');
+		expect(context.find('.page').find('.about').at(1).prop('id')).toBe('Contact');
 
 	});
 
