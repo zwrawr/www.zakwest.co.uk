@@ -51,6 +51,8 @@ npm run lint
 	preact routes and their styles are here
 	- `style`
 	Site wide styles (font familys, coulor scheme) are here
+  - `server`
+  server side code run by node
   - `tests`
   tests for the site
     - `__mocks__`

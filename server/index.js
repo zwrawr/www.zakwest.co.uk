@@ -1,9 +1,12 @@
-/* eslint-env node */
-/* eslint-disable no-console */
+
 
 console.info('\n=> WWW.ZAKWEST.TECH \n\n');
 console.info('[index.js][__dirname] :' + __dirname);
 
+// setup file watch
+const FolderWatch = require('./utils/folderWatch');
+const watch = new FolderWatch('./public/files', './public/data/files.json');
+watch.update();
 
 // import express
 const express = require('express');
@@ -34,12 +37,12 @@ app.use((req,res,next) => {
 });
 
 // Set up static file hosting
-app.use('/public', express.static(path.join(__dirname,'/public')));
-console.info('[index.js][static] ' + path.join(__dirname,'/public'));
+app.use('/public', express.static(path.join(__dirname,'../public')));
+console.info('[index.js][static] ' + path.join(__dirname,'../public'));
 
 // Serve the preact app staticically
-app.use(express.static(path.join(__dirname,'/build')));
-console.info('[index.js][static] ' + path.join(__dirname,'/build'));
+app.use(express.static(path.join(__dirname,'../build')));
+console.info('[index.js][static] ' + path.join(__dirname,'../build'));
 
 // Redirect to /blog to blog.zakwest.tech
 app.get('/blog', (req,res) => (

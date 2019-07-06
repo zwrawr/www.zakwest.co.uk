@@ -15,7 +15,7 @@ module.exports = {
 	},
 
 	"env": {
-		"node": true
+		"browser": true
 	},
 
 	"extends": "eslint:recommended",
@@ -23,18 +23,15 @@ module.exports = {
 	"rules": {
 		"semi": "error",
 		"arrow-body-style": ["error", "as-needed"],
-		"arrow-parens": ["off", "always"],
 		"arrow-spacing": "error",
 		"brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
 		"camelcase": ["warn", { "properties": "never" }],
 		"comma-dangle": ["error", "never"],
 		"comma-style": ["error", "last"],
-		"constructor-super": "error",
 		"curly": ["off", "multi-line"],
 		"dot-notation": ["error", { "allowPattern": "^[a-z]+(_[a-z]+)+$" }],
-		"eqeqeq": "off",
+		"eqeqeq": "error",
 		"func-style": ["error", "declaration", { "allowArrowFunctions": true }],
-		"guard-for-in": "off",
 		"handle-callback-err": "off",
 		"indent": ["error", "tab", { "SwitchCase": 1 }],
 		"jsx-quotes": ["error", "prefer-double"],
@@ -54,9 +51,6 @@ module.exports = {
 		"no-dupe-keys": "error",
 		"no-duplicate-imports": "error",
 		"no-else-return": "error",
-		"no-empty-pattern": "off",
-		"no-empty": "off",
-		"no-extra-parens": "off",
 		"no-iterator": "error",
 		"no-lonely-if": "error",
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
@@ -66,7 +60,6 @@ module.exports = {
 		"no-proto": "error",
 		"no-redeclare": "error",
 		"no-shadow-restricted-names": "error",
-		"no-shadow": "off",
 		"no-spaced-func": "error",
 		"no-this-before-super": "error",
 		"no-trailing-spaces": ["error", { "skipBlankLines": true }],
@@ -77,7 +70,6 @@ module.exports = {
 		"no-useless-computed-key": "error",
 		"no-useless-concat": "error",
 		"no-useless-constructor": "error",
-		"no-useless-escape": "error",
 		"no-useless-rename": "error",
 		"no-var": "error",
 		"no-with": "error",
@@ -86,7 +78,6 @@ module.exports = {
 		"prefer-arrow-callback": "error",
 		"prefer-rest-params": "warn",
 		"prefer-spread": "warn",
-		"prefer-template": "off",
 		"quote-props": ["error", "as-needed"],
 		"quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
 		"radix": "error",

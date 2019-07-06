@@ -1,223 +1,79 @@
 {
 	"path": "",
 	"name": "files",
-	"openbydefault":true,
+	"openbydefault": true,
 	"children": [
 		{
+			"name": ".gitignore",
+			"path": "./public/files/.gitignore",
+			"modtime": "2019-06-21T18:41:35.214Z",
+			"type": null
+		},
+		{
+			"name": "fruit.txt",
+			"path": "./public/files/fruit.txt",
+			"modtime": "2019-07-06T21:51:24.058Z",
+			"type": "text/plain"
+		},
+		{
 			"name": "test.txt",
-			"path": "/test.txt",
-			"type": "text/plain",
-			"mod_time": "2019-04-21T21:58:53.475Z"
+			"path": "./public/files/test.txt",
+			"modtime": "2019-06-21T18:38:46.236Z",
+			"type": "text/plain"
 		},
 		{
-			"name": "Github",
-			"path": "/Github",
-			"children": [{
-					"name": "BrainFucker.NET",
-					"path": "/Github/BrainFucker.NET",
-					"children": [{
-						"name": "Header.svg",
-						"path": "/Github/BrainFucker.NET/Header.svg",
-						"type": "image/svg+xml",
-						"mod_time": "2017-03-22T22:27:25.855Z"
-					}]
+			"name": "test1",
+			"path": "./public/files/test1",
+			"children": [
+				{
+					"name": "test1.txt",
+					"path": "./public/files/test1/test1.txt",
+					"modtime": "2019-06-21T18:38:46.236Z",
+					"type": "text/plain"
 				},
 				{
-					"name": "www.zakwest.tech",
-					"path": "/Github/www.zakwest.tech",
-					"children": [{
-						"name": "www.zakwest.tech.png",
-						"path": "/Github/www.zakwest.tech/www.zakwest.tech.png",
-						"type": "image/png",
-						"mod_time": "2017-03-22T22:27:25.859Z"
-					}]
-				}
-			]
-		},
-		{
-			"name": "ludumdare",
-			"path": "/ludumdare",
-			"children": [{
-					"name": "LD35",
-					"path": "/ludumdare/LD35",
-					"children": [{
-							"name": "GeoRun_OSX.zip",
-							"path": "/ludumdare/LD35/GeoRun_OSX.zip",
-							"type": "application/zip",
-							"mod_time": "2017-03-22T22:27:26.047Z"
-						},
-						{
-							"name": "GeoRun_Win.zip",
-							"path": "/ludumdare/LD35/GeoRun_Win.zip",
-							"type": "application/zip",
-							"mod_time": "2017-03-22T22:27:26.007Z"
-						}
-					]
-				},
-				{
-					"name": "LD37",
-					"path": "/ludumdare/LD37",
-					"children": [{
-						"name": "LudumDareLogo.svg",
-						"path": "/ludumdare/LD37/LudumDareLogo.svg",
-						"type": "image/svg+xml",
-						"modtime": "2017-03-22T22:27:26.047Z"
-					}]
-				},
-				{
-					"name": "LD38",
-					"path": "/ludumdare/LD38",
+					"name": "test2",
+					"path": "./public/files/test1/test2",
 					"children": [
 						{
-							"name": "LD38.jpg",
-							"path": "/ludumdare/LD38/LD38.jpg",
-							"type": "image/jpeg",
-							"modtime": "2017-04-09T19:09:01.442Z"
-						},
-						{
-							"name": "Game",
-							"path": "/ludumdare/LD38/Game",
-							"children": [
-								{
-									"name": "index.html",
-									"path": "/ludumdare/LD38/Game/index.html",
-									"type": "text/html",
-									"modtime": "2017-04-23T20:32:34.652Z"
-								},
-								{
-									"name": "Release",
-									"path": "/ludumdare/LD38/Game/Release",
-									"children": [{
-											"name": "Builds.datagz",
-											"path": "/ludumdare/LD38/Game/Release/Builds.datagz",
-											"type": "application/x-datagz",
-											"modtime": "2017-04-23T20:32:31.120Z"
-										},
-										{
-											"name": "Builds.jsgz",
-											"path": "/ludumdare/LD38/Game/Release/Builds.jsgz",
-											"type": "application/x-jsgz",
-											"modtime": "2017-04-23T20:32:35.656Z"
-										},
-										{
-											"name": "Builds.memgz",
-											"path": "/ludumdare/LD38/Game/Release/Builds.memgz",
-											"type": "application/x-memgz",
-											"modtime": "2017-04-23T20:32:31.068Z"
-										},
-										{
-											"name": "UnityLoader.js",
-											"path": "/ludumdare/LD38/Game/Release/UnityLoader.js",
-											"type": "application/js",
-											"modtime": "2017-04-23T20:32:35.276Z"
-										}
-									]
-								},
-								{
-									"name": "TemplateData",
-									"path": "/ludumdare/LD38/Game/TemplateData",
-									"children": [{
-											"name": "UnityProgress.js",
-											"path": "/ludumdare/LD38/Game/TemplateData/UnityProgress.js",
-											"type": "application/js",
-											"modtime": "2017-04-23T20:32:31.156Z"
-										},
-										{
-											"name": "favicon.ico",
-											"path": "/ludumdare/LD38/Game/TemplateData/favicon.ico",
-											"type": "image/vnd.microsoft.icon",
-											"modtime": "2017-04-23T20:32:35.292Z"
-										},
-										{
-											"name": "fullbar.png",
-											"path": "/ludumdare/LD38/Game/TemplateData/fullbar.png",
-											"type": "image/png",
-											"modtime": "2017-04-23T20:32:35.236Z"
-										},
-										{
-											"name": "fullscreen.png",
-											"path": "/ludumdare/LD38/Game/TemplateData/fullscreen.png",
-											"type": "image/png",
-											"modtime": "2017-04-23T20:32:35.284Z"
-										},
-										{
-											"name": "loadingbar.png",
-											"path": "/ludumdare/LD38/Game/TemplateData/loadingbar.png",
-											"type": "image/png",
-											"modtime": "2017-04-23T20:32:31.020Z"
-										},
-										{
-											"name": "logo.png",
-											"path": "/ludumdare/LD38/Game/TemplateData/logo.png",
-											"type": "image/png",
-											"modtime": "2017-04-23T20:32:31.028Z"
-										},
-										{
-											"name": "progresslogo.png",
-											"path": "/ludumdare/LD38/Game/TemplateData/progresslogo.png",
-											"type": "image/png",
-											"modtime": "2017-04-23T20:32:31.080Z"
-										},
-										{
-											"name": "style.css",
-											"path": "/ludumdare/LD38/Game/TemplateData/style.css",
-											"type": "text/css",
-											"modtime": "2017-04-23T20:32:31.092Z"
-										}
-									]
-								}
-							]
+							"name": "test",
+							"path": "./public/files/test1/test2/test",
+							"modtime": "2019-06-21T18:38:46.236Z",
+							"type": null
 						}
 					]
 				},
 				{
-					"name": "dev",
-					"path": "/ludumdare/dev",
-					"children": [{
-						"name": "index.html",
-						"path": "/ludumdare/dev/index.html",
-						"type": "text/html",
-						"modtime": "2017-12-05T14:52:30.072Z"
-					}]
+					"name": "test2.txt",
+					"path": "./public/files/test1/test2.txt",
+					"modtime": "2019-06-21T18:38:46.236Z",
+					"type": "text/plain"
 				},
 				{
-					"name": "stats",
-					"path": "/ludumdare/stats",
-					"children": [{
-							"name": "LDStats-30032018.xlsx",
-							"path": "/ludumdare/stats/LDStats-30032018.xlsx",
-							"type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-							"modtime": "2018-04-02T18:52:58.438Z"
-						},
-						{
-							"name": "index.html",
-							"path": "/ludumdare/stats/index.html",
-							"type": "text/html",
-							"modtime": "2018-04-02T19:12:36.415Z"
-						},
-						{
-							"name": "ludumdare.png",
-							"path": "/ludumdare/stats/ludumdare.png",
-							"type": "image/png",
-							"modtime": "2018-04-02T19:17:52.241Z"
-						}
-					]
+					"name": "test3.txt",
+					"path": "./public/files/test1/test3.txt",
+					"modtime": "2019-06-21T18:38:46.236Z",
+					"type": "text/plain"
 				}
 			]
 		},
 		{
-			"name": "uni",
-			"path": "/uni",
-			"children": [{
-				"name": "predictive_text",
-				"path": "/uni/predictive_text",
-				"children": [{
-					"name": "PredictiveText.zip",
-					"path": "/uni/predictive_text/PredictiveText.zip",
-					"type": "application/zip",
-					"modtime": "2017-03-22T22:27:26.055Z"
-				}]
-			}]
+			"name": "test1.txt",
+			"path": "./public/files/test1.txt",
+			"modtime": "2019-06-21T18:38:46.236Z",
+			"type": "text/plain"
+		},
+		{
+			"name": "test2",
+			"path": "./public/files/test2",
+			"children": [
+				{
+					"name": "test.txt",
+					"path": "./public/files/test2/test.txt",
+					"modtime": "2019-07-06T21:03:06.162Z",
+					"type": "text/plain"
+				}
+			]
 		}
 	]
 }
