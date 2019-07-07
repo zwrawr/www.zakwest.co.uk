@@ -1,0 +1,79 @@
+{
+	"path": "",
+	"name": "files",
+	"openbydefault": true,
+	"children": [
+		{
+			"name": ".gitignore",
+			"path": "./public/files/.gitignore",
+			"modtime": "2019-06-21T18:41:35.214Z",
+			"type": null
+		},
+		{
+			"name": "fruit.txt",
+			"path": "./public/files/fruit.txt",
+			"modtime": "2019-07-06T21:51:24.058Z",
+			"type": "text/plain"
+		},
+		{
+			"name": "test.txt",
+			"path": "./public/files/test.txt",
+			"modtime": "2019-06-21T18:38:46.236Z",
+			"type": "text/plain"
+		},
+		{
+			"name": "test1.txt",
+			"path": "./public/files/test1.txt",
+			"modtime": "2019-06-21T18:38:46.236Z",
+			"type": "text/plain"
+		},
+		{
+			"name": "test1",
+			"path": "./public/files/test1",
+			"children": [
+				{
+					"name": "test1.txt",
+					"path": "./public/files/test1/test1.txt",
+					"modtime": "2019-06-21T18:38:46.236Z",
+					"type": "text/plain"
+				},
+				{
+					"name": "test2.txt",
+					"path": "./public/files/test1/test2.txt",
+					"modtime": "2019-06-21T18:38:46.236Z",
+					"type": "text/plain"
+				},
+				{
+					"name": "test3.txt",
+					"path": "./public/files/test1/test3.txt",
+					"modtime": "2019-06-21T18:38:46.236Z",
+					"type": "text/plain"
+				},
+				{
+					"name": "test2",
+					"path": "./public/files/test1/test2",
+					"children": [
+						{
+							"name": "test",
+							"path": "./public/files/test1/test2/test",
+							"modtime": "2019-06-21T18:38:46.236Z",
+							"type": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "test2",
+			"path": "./public/files/test2",
+			"children": [
+				{
+					"name": "test.txt",
+					"path": "./public/files/test2/test.txt",
+					"modtime": "2019-07-06T21:03:06.162Z",
+					"type": "text/plain"
+				}
+			]
+		}
+	]
+}

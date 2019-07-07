@@ -1,8 +1,8 @@
 node_modules
+*.lock
 
-# Will deal with ignoring the contents of this folder in a seperate .gitignore
-#Source/Public/files/*
-
-Built/
-
+build/
 tmp/
+coverage/
+
+/*.log

@@ -1,56 +1,94 @@
 {
-  "name": "zakwest.tech",
-  "version": "1.0.0",
-  "private": true,
-  "description": "The source of the website residing at https://zakwest.tech",
-  "main": "index.js",
-  "scripts": {
-
-    "start": "if test -e Built/index.js ;  then node Built/index.js;  else echo \"Error: Cannot find index.js, has the prackage been built?\"; fi",
-    "clean": "rm -rf tmp && rm -rf Built",
-
-    "prebuild": "mkdir -p Built",
-    "build": "npm run build:server_js & npm run build:client_js & npm run build:veiws & npm run build:styles & npm run build:images & npm run build:data & npm run build:files",
-
-    "prebuild:server_js": "mkdir -p Built/Scripts",
-    "build:server_js": "cp Source/Scripts/*.js Built/Scripts & cp Source/*.js Built",
-
-    "prebuild:client_js": "mkdir -p tmp/Source/Public/js/ & mkdir -p Built/Public/js",
-    "build:client_js": "for file in Source/Public/js/*.js; do uglifyjs $file --output tmp/$file --compress --mangle; done && cp tmp/Source/Public/js/*.js Built/Public/js",
-
-    "prebuild:veiws": "mkdir -p Built/Views && mkdir -p Built/Views/Layouts && mkdir -p Built/Views/Partials",
-    "build:veiws": "cp Source/Views/*.handlebars Built/Views & cp Source/Views/Layouts/*.handlebars Built/Views/Layouts & cp Source/Views/Partials/*.handlebars Built/Views/Partials",
-
-    "prebuild:styles": "mkdir -p Built/Public/css",
-    "build:styles": "node-sass Source/Styles/ --output-style compressed --output Built/Public/css/",
-
-    "prebuild:images": "mkdir -p Built/Public/img && mkdir -p Built/Public/img/content && mkdir -p Built/Public/img/files && mkdir -p Built/Public/img/header",
-    "build:images": "cp -r Source/Public/img/* Built/Public/img",
-
-    "prebuild:data": "mkdir -p Built/Data & mkdir -p tmp/Source/Data",
-    "build:data": "cp Source/Data/*.md Built/Data && cp Source/Data/*.json Built/Data",
-
-    "prebuild:files": "mkdir -p Built/Public/files",
-    "build:files": "cp -r Source/Public/files/* Built/Public/files/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zwrawr/www.zakwest.tech.git"
-  },
-  "author": "Zak West",
-  "license": "Copyright Zak West 2017",
-  "bugs": {
-    "url": "https://github.com/zwrawr/www.zakwest.tech.git/issues"
-  },
-  "homepage": "https://github.com/zwrawr/www.zakwest.tech.git#readme",
-  "dependencies": {
-    "express": "^4.14.1",
-    "express-handlebars": "^3.0.0",
-    "fs": "0.0.2",
-    "markdown-it": "^8.3.0",
-    "markdown-it-container": "^2.0.0",
-    "markdown-it-highlightjs": "^3.0.0",
-    "node-sass": "^4.5.0",
-    "uglify-js": "^2.8.12"
-  }
+	"private": true,
+	"author": "Zak West",
+	"name": "zakwest.tech",
+	"description": "The source of the website residing at https://zakwest.tech",
+	"version": "2.0.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zwrawr/www.zakwest.tech.git"
+	},
+	"license": "Copyright Zak West 2017",
+	"bugs": {
+		"url": "https://github.com/zwrawr/www.zakwest.tech.git/issues"
+	},
+	"homepage": "https://github.com/zwrawr/www.zakwest.tech.git#readme",
+	"scripts": {
+		"start": "node server/index.js",
+		"build": "preact build",
+		"dev": "ln -sf ../../public src/assets/ ; preact watch ; unlink src/assets/public",
+		"clean": "if [ -e src/assets/public ]; then unlink src/assets/public & echo '[UNLN] unlinked src/assets/public'; fi; if [ -e build ]; then rm -rf build & echo '[ RM ] removed build'; fi; if [ -e coverage ]; then rm -rf coverage & echo '[ RM ] removed coverage'; fi; echo '[DONE]Finished Clean' ",
+		"lint": "eslint src tests; stylelint 'src/**/*.less'",
+		"test": "jest"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.2",
+		"coveralls": "^3.0.4",
+		"enzyme": "^3.10.0",
+		"enzyme-adapter-preact-pure": "^2.0.0",
+		"eslint": "^5.16.0",
+		"eslint-plugin-react": "^7.13.0",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^24",
+		"jest-fetch-mock": "^2.1.2",
+		"less": "^3.9.0",
+		"less-loader": "^5.0.0",
+		"per-env": "^1.0.2",
+		"preact-cli": "3.0.0-rc.1",
+		"preact-render-to-string": "^4.1.0",
+		"stylelint": "^10.1.0",
+		"stylelint-config-standard": "^18"
+	},
+	"dependencies": {
+		"acorn": "^6.2.0",
+		"mime-types": "^2.1.24",
+		"preact": "^8.2.6",
+		"preact-router": "^2.5.7",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"read-chunk": "^3.2.0",
+		"uglify-js": "^3.6.0"
+	},
+	"eslintIgnore": [
+		"build/*",
+		"public/*"
+	],
+	"jest": {
+		"verbose": true,
+		"setupFiles": [
+			"<rootDir>/tests/__mocks__/browserMocks.js",
+			"<rootDir>/tests/__setup__/enzymeSetup.js"
+		],
+		"testRegex": "(/(__tests__|tests)/.*|(\\.|/)(test|spec))\\.jsx?$",
+		"testPathIgnorePatterns": [
+			"/node_modules/",
+			"<rootDir>/tests/__mocks__/*",
+			"<rootDir>/tests/__setup__/*"
+		],
+		"testURL": "http://localhost:8080",
+		"moduleFileExtensions": [
+			"js",
+			"jsx"
+		],
+		"moduleDirectories": [
+			"node_modules"
+		],
+		"moduleNameMapper": {
+			"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/__mocks__/fileMocks.js",
+			"\\.(css|less|scss)$": "identity-obj-proxy",
+			"^./style$": "identity-obj-proxy",
+			"^preact$": "<rootDir>/node_modules/preact/dist/preact.min.js"
+		},
+		"errorOnDeprecated": true,
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx}",
+			"!**/node_modules/**",
+			"!**/vendor/**"
+		],
+		"coverageReporters": [
+			"text",
+			"lcovonly"
+		]
+	}
 }
