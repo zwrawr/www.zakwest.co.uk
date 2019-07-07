@@ -1,5 +1,3 @@
-
-
 console.info('\n=> WWW.ZAKWEST.TECH \n\n');
 console.info('[index.js][__dirname] :' + __dirname);
 
@@ -11,9 +9,6 @@ watch.update();
 // import express
 const express = require('express');
 const app = express();
-
-//import path
-const path = require('path');
 
 // Stops info about our server being sent in http headers
 app.disable('x-powered-by');
@@ -36,30 +31,9 @@ app.use((req,res,next) => {
 	next();
 });
 
-// Set up static file hosting
-app.use('/public', express.static(path.join(__dirname,'../public')));
-console.info('[index.js][static] ' + path.join(__dirname,'../public'));
-
-// Serve the preact app staticically
-app.use(express.static(path.join(__dirname,'../build')));
-console.info('[index.js][static] ' + path.join(__dirname,'../build'));
-
-// Redirect to /blog to blog.zakwest.tech
-app.get('/blog', (req,res) => (
-	 res.redirect(303, 'https://blog.zakwest.co.uk')
-));
-
-// Redirect to /page/about and /page/contact to /about
-app.get(/^\/page\/(about|contact)\/?/, (req,res) => (
-	res.redirect(303, '/about')
-));
-
-// every other route will go to the single page preact app
-app.get(['/about','/files'], (req, res) => {
-	console.info('serving static PWA');
-	res.sendFile(path.resolve(__dirname, 'build/index.html'));
-});
-
+require('./routes/static').registerRoutes(app, express);
+require('./routes/redirects').registerRoutes(app, express);
+require('./routes/pwa').registerRoutes(app, express);
 
 // Set up listing
 app.listen(

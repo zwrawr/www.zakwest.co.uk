@@ -2,7 +2,7 @@ const fs = require('fs');
 const util = require('util');
 const mime = require('mime-types');
 
-const updateTime = 60*60*1000;
+const updateTime = 60*60*1000; // hour
 
 class FolderWatch {
 
@@ -20,12 +20,13 @@ class FolderWatch {
 			this.update();
 		});
 
-		// run update so often even if n events happened
+		// run update so often even if no events happened
 		setInterval( () => {
 			this.update();
 		}, updateTime);
 	}
 
+	// Read the file tree and save as json
 	update() {
 
 		let data = {
@@ -36,11 +37,11 @@ class FolderWatch {
 
 		data.children = this.readFolder(this.folder);
 
-		console.log(data);
 		this.write(data);
 
 	}
 
+	// Write json to file
 	write(data){
 
 		fs.writeFile(
@@ -55,8 +56,15 @@ class FolderWatch {
 		);
 	}
 
+	// reads one folder and return it's json. recursive
 	readFolder(folder) {
 		const files = fs.readdirSync(folder, { withFileTypes: true });
+
+		files.sort((a,b) => {
+			if (a.isFile() && b.isDirectory()) return -1; // files come before directorys
+			if (a.isDirectory() && b.isFile()) return 1; // directorys come after files
+			return 0;
+		});
 
 		let json = [];
 
@@ -72,7 +80,6 @@ class FolderWatch {
 				data.modtime = new Date(util.inspect(fs.statSync(path).mtime));
 
 				const type = mime.lookup(files[i].name);
-				console.log(type);
 				data.type = type ? type : null;
 			}
 			else if (files[i].isDirectory()) {

@@ -2,7 +2,6 @@ import { h, Component } from 'preact';
 
 import style from './style';
 
-const filesBaseRoute = '/public/files/';
 const iconBase = '/public/img/icons/files/';
 const iconSuffix = '.svg';
 
@@ -16,6 +15,10 @@ export default class File extends Component {
 	constructor(props){
 		super(props);
 
+		if (!props.type) {
+			props.type = 'file';
+		}
+
 		this.state = {
 			src: iconBase + props.type + iconSuffix
 		};
@@ -27,11 +30,11 @@ export default class File extends Component {
 
 		return (
 			<div class={style.file}>
-				<a href={filesBaseRoute + path} target="_blank" rel="noopener noreferrer">
+				<a href={path} target="_blank" rel="noopener noreferrer">
 					<img src={src} onerror={this.loadFailed} />
 					<div>
 						<h4>{name}</h4>
-						<p>{filesBaseRoute + path}</p>
+						<p>{path}</p>
 						<p>modtime : {modtime}	type : {type}</p>
 					</div>
 				</a>
