@@ -20,7 +20,7 @@ const Footer = () => (
 			</a>
 		</div>
 		<div class={style.right}>
-			<a href="https://github.com/zwrawr/www.zakwest.tech">
+			<a href="https://github.com/zwrawr/www.zakwest.co.uk">
 				<img src={github} alt="Source on Github" />
 			</a>
 		</div>

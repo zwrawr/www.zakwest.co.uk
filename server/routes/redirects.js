@@ -10,7 +10,7 @@ function registerRoutes(app) {
 	console.info('[redirects.js][redirect] /page/about   ==> /about');
 	console.info('[redirects.js][redirect] /page/contact ==> /about');
 
-	// Redirect to /blog to blog.zakwest.tech
+	// Redirect to /blog to blog.zakwest.co.uk
 	app.get('/blog', (req,res) => (
 		res.redirect(303, 'https://blog.zakwest.co.uk')
 	));

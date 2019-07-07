@@ -1,4 +1,4 @@
-# ww.zakwest.tech
+# ww.zakwest.co.uk
 [![Build Status](https://travis-ci.com/zwrawr/www.zakwest.co.uk.svg?branch=develop)](https://travis-ci.com/zwrawr/www.zakwest.co.uk)
 [![Coverage Status](https://coveralls.io/repos/github/zwrawr/www.zakwest.co.uk/badge.svg?branch=develop)](https://coveralls.io/github/zwrawr/www.zakwest.co.uk?branch=develop)
 [![License: CC BY 3.0](https://img.shields.io/badge/License-CC%20BY%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by/3.0/)
