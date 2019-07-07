@@ -15,7 +15,7 @@
 	"homepage": "https://github.com/zwrawr/www.zakwest.tech.git#readme",
 	"scripts": {
 		"start": "node server/index.js",
-		"build": "preact build",
+		"build": "preact build --sw=false",
 		"dev": "ln -sf ../../public src/assets/ ; preact watch ; unlink src/assets/public",
 		"clean": "if [ -e src/assets/public ]; then unlink src/assets/public & echo '[UNLN] unlinked src/assets/public'; fi; if [ -e build ]; then rm -rf build & echo '[ RM ] removed build'; fi; if [ -e coverage ]; then rm -rf coverage & echo '[ RM ] removed coverage'; fi; echo '[DONE]Finished Clean' ",
 		"lint": "eslint src tests; stylelint 'src/**/*.less'",
@@ -37,8 +37,7 @@
 		"preact-cli": "3.0.0-rc.1",
 		"preact-render-to-string": "^4.1.0",
 		"stylelint": "^10.1.0",
-		"stylelint-config-standard": "^18",
-		"sw-precache-webpack-plugin": "^0.11.5"
+		"stylelint-config-standard": "^18"
 	},
 	"dependencies": {
 		"acorn": "^6.2.0",
