@@ -1,18 +1,18 @@
 {
 	"private": true,
 	"author": "Zak West",
-	"name": "zakwest.tech",
-	"description": "The source of the website residing at https://zakwest.tech",
+	"name": "zakwest.co.uk",
+	"description": "The source of the website residing at https://zakwest.co.uk",
 	"version": "2.0.0",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/zwrawr/www.zakwest.tech.git"
+		"url": "git+https://github.com/zwrawr/www.zakwest.co.uk.git"
 	},
 	"license": "Copyright Zak West 2017",
 	"bugs": {
-		"url": "https://github.com/zwrawr/www.zakwest.tech.git/issues"
+		"url": "https://github.com/zwrawr/www.zakwest.co.uk.git/issues"
 	},
-	"homepage": "https://github.com/zwrawr/www.zakwest.tech.git#readme",
+	"homepage": "https://github.com/zwrawr/www.zakwest.co.uk.git#readme",
 	"scripts": {
 		"start": "node server/index.js",
 		"build": "preact build --sw=false",

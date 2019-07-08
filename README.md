@@ -30,7 +30,7 @@ npm run lint
 
 - `www.zakwest.tech`
   - `config`
-  service files for systemd and config files for apache when using dev.zakwest.tech
+  service files for systemd and config files for apache when using dev.zakwest.co.uk
   - `coverage`
   code coverage reports produced by jest and consumed by coveralls
   - `public`
@@ -66,8 +66,8 @@ npm run lint
 
 ## Building and Running the pseudo Production enviroment
 ### Setup
-Head over to the [dev.zakwest.tech](https://github.com/zwrawr/dev.zakwest.tech) repo to find out how to use vagrant to host this project.
-The provisioning script deals with all the installation and setup and make the site avaliable at www.dev.zakwest.tech .
+Head over to the [dev.zakwest.co.uk](https://github.com/zwrawr/dev.zakwest.co.uk) repo to find out how to use vagrant to host this project.
+The provisioning script deals with all the installation and setup and make the site avaliable at www.dev.zakwest.co.uk .
 
 ### Rebuild
 To rebuild the site via npm run the following commands.
@@ -79,7 +79,7 @@ To rebuild the site via npm run the following commands.
 ### Restart
 If changes have been made to the site, then you'll have to restart the node app.
 ```bash
-	sudo service www.zakwest.tech restart
+	sudo service www.dev.zakwest.tech restart
 ```
 If changes have been made to the nginx config, then you'll have to restart nginx.
 ```bash
