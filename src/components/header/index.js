@@ -15,6 +15,14 @@ const sizes = '100vw';
 const Header = () => (
 	<header class={style.header}>
 		<div class={style.top}>
+			<picture>
+				<source media="(max-width: 576px)" srcset={base+'576.png'} />
+				<source media="(max-width: 768px)" srcset={base+'768.png'} />
+				<source media="(max-width: 992px)" srcset={base+'992.png'} />
+				<source media="(max-width: 1200px)" srcset={base+'1200.png'} />
+				<source media="(min-width: 1201px)" srcset={base+'2560.png'} />
+				<img src={base+'1200.png'} />
+			</picture>
 			<img style={style.headerimgcontainer} src={base+'1080w.png'} srcset={srcset} sizes={sizes} alt="blue-green triangle background" />
 			<Link href="/" class={style.text}>
 				<h1>Zak West</h1>

@@ -71,7 +71,7 @@
 		},
 
 		{
-			"address" : "/files/ludumdare/stats/",
+			"address" : "/public/files/ludumdare/stats/",
 			"target" : "_blank",
 			"rel" : "noopener",
 			"title" : "LDStats",
