@@ -8,7 +8,7 @@ const img = '/public/img/header/header.svg';
 const Header = () => (
 	<header class={style.header}>
 		<div class={style.top}>
-			<div style={style.imgcontainer}>
+			<div class={style.imgcontainer}>
 				<img src={img} alt="blue-green triangle background" />
 			</div>
 			<Link href="/" class={style.text}>
