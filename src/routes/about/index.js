@@ -17,7 +17,7 @@ const contacttext = [
 	<p>I’m <a href="https://twitter.com/zwrawr">@zwrawr</a> over on Twitter</p>,
 	<p>I’m <a href="https://github.com/zwrawr">@zwrawr</a> over on Github</p>,
 	<p>I have a <a href="https://linkedin.com/in/zakrawest">linkedin</a> account.</p>,
-	<p>You can email me at <a href="mailto:zwrawr@gmail.com?subject=Hello%20!%20:%20From%20zakwest.tech&amp;body=Hey%20Zak,%0A%20%20%20%20%20%20%20%20I'm%20contacting%20to%20you%20to%20.%20.%20."> zakr.a.west@gmail.com </a> or <a href="mailto:zwrawr@gmail.com?subject=Hello%20!%20:%20From%20zakwest.tech&amp;body=Hey%20Zak,%0A%20%20%20%20%20%20%20%20I'm%20contacting%20to%20you%20to%20.%20.%20."> zwrawr@gmail.com </a></p>
+	<p>You can email me at <a href="mailto:zwrawr@gmail.com?subject=Hello%20!%20:%20From%20zakwest.co.uk&amp;body=Hey%20Zak,%0A%20%20%20%20%20%20%20%20I'm%20contacting%20to%20you%20to%20.%20.%20."> zakr.a.west@gmail.com </a> or <a href="mailto:zwrawr@gmail.com?subject=Hello%20!%20:%20From%20zakwest.co.uk&amp;body=Hey%20Zak,%0A%20%20%20%20%20%20%20%20I'm%20contacting%20to%20you%20to%20.%20.%20."> zwrawr@gmail.com </a></p>
 ];
 
 const About = () => (

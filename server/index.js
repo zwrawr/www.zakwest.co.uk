@@ -1,4 +1,4 @@
-console.info('\n=> WWW.ZAKWEST.TECH \n\n');
+console.info('\n=> WWW.ZAKWEST.CO.UK \n\n');
 console.info('[index.js][__dirname] :' + __dirname);
 
 // setup file watch
