@@ -5,7 +5,7 @@
 
 This is the source for my website [www.zakwest.co.uk](https://www.zakwest.co.uk). It's built using Node.js on the server side and preact on the client side. jest and enzyme are used for testing whilst eslint and stylelint are the linters.
 
-![Image of the zakwest.co.uk site](https://zakwest.co.uk/files/Github/www.zakwest.tech/www.zakwest.tech.png)
+![Image of the zakwest.co.uk site](https://zakwest.co.uk/public/files/Github/www.zakwest.tech/www.zakwest.tech.png)
 
 ## Development CLI Commands
 
