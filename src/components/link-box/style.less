@@ -13,7 +13,15 @@
 	a {
 		&:hover {
 			.links_image {
-				transform: scale(1.1);
+				transform: scale(1);
+			}
+
+			h2 {
+				opacity: 1;
+			}
+
+			p {
+				opacity: 1;
 			}
 		}
 
@@ -21,7 +29,8 @@
 			width: 100%;
 			height: 100%;
 
-			transition: transform 0.2s ease;
+			transform: scale(1.1);
+			transition: transform 0.25s ease;
 		}
 
 		h2 {
@@ -38,6 +47,10 @@
 			margin: auto;
 
 			background: rgba(#000, 0.75);
+
+			opacity: 0;
+			transition: opacity 0.25s ease;
+
 		}
 
 		p {
@@ -52,6 +65,9 @@
 
 			width: 80%;
 			margin: auto;
+
+			opacity: 0;
+			transition: opacity 0.25s ease;
 		}
 	}
 }
